@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>Activity 1</title>
+
+    </head>
+    <!--Important to use semantic tags instead of div tags-->
+    <body>
+        <header>
+            <h1 style="color:orange">Activity</h1>
+            <h2>Welcome to Cafe Delights</h2>
+            <p>Your cozy corner for the best coffee and treats in town.</p>
+        </header>
+
+        <main>
+            <h3>Contact Us</h3>
+            <p>We'd love to hear from you! Please fill out the form below:</p>
+            <form>
+                <p style="display: inline-block; margin-left: 10px;margin-bottom: -10px;background-color: white;">Personal Information</p>
+                <div style="border-style: solid; padding: 10px;">
+                    <label for="name">Name:</label>
+                    <input type="text">
+                    <br>
+                    <label for="Email">Email:</label>
+                    <input type="email">
+                    <br>
+                    <label for="PhoneNumber">Phone Number:</label>
+                    <input type="tel" placeholder="123-456-7890">
+                    <br>
+                    <label for="DateOfBirth">Date of Birth:</label>
+                    <input type="date">
+                </div>
+
+                <p style="display: inline-block; margin-left: 10px;margin-bottom: -10px;background-color: white;">Visit Information</p>
+                <div style="border-style: solid; padding: 10px;">
+                    <label for="preferredVisitDate">Preferred Visit Date:</label>
+                    <input type="date">
+                    <br>
+                    <label for="PreferredTime">Preferred Time:</label>
+                    <input type="time">
+                    <br>
+                    <label for="PhoneNumber">Phone Number:</label>
+                    <input type="tel" placeholder="123-456-7890">
+                    <br>
+                    <label for="DateOfBirth">Date of Birth:</label>
+                    <input type="date">
+                    <br>
+                    <label for="IsTrueReturningCustomer">Are you a returning customer"?</label>
+                    <br>
+                    <input type="radio" id="returningCustomerYes" name="returningCustomerYes" value="Yes">
+                    <label for="returningCustomerYes">Yes</label>
+                    <br>
+                    <input type="radio" id="returningCustomerNo" name="returningCustomerNo" value="No">
+                    <label for="returningCustomerYes">No</label>
+                </div>
+
+                <p style="display: inline-block; margin-left: 10px;margin-bottom: -10px;background-color: white;">Order Preferences</p>
+                <div style="border-style: solid; padding: 10px;">
+                    <label for="">Favorite Drink:</label>
+                    <select>
+                        <option>
+                            Latte
+                        </option>
+                        <option>
+                            Americano
+                        </option>
+                        <option>
+                            Cappucino
+                        </option>
+                    </select>
+                    <br>
+
+                    <p>Select your dietary preferences:<p>
+                    
+                    <input type="checkbox" id="" name="" value="">
+                    <label for="">Vegan</label>
+                    <br>
+                    <input type="checkbox" id="" name="" value="">
+                    <label for="">Vegetarian</label>
+                    <br>
+                    <input type="checkbox" id="" name="" value="">
+                    <label for="">Gluten Free</label>
+                </div>
+
+                <p style="display: inline-block; margin-left: 10px;margin-bottom: -10px;background-color: white;">Feedback</p>
+                <div style="border-style: solid; padding: 10px;">
+                    <label for="">Rate your last visit(1-5):</label>
+                    <input type="range" min="1" max="5">
+                    <br>
+                    <label for=""> Additional Comments</label>
+                    <br>
+                    <textarea rows="5" cols="50" placeholder="Input your comment here"></textarea>
+                    <br>
+
+                    <label for="">
+                        Would you like to receive our newsletter?
+                    </label>
+                    <input type="checkbox" id="" name="" value="">
+                </div>
+                <br>
+
+
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+
+    
+
+    </body>
+</html>

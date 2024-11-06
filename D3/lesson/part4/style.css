@@ -1,0 +1,145 @@
+*{
+    margin: 0; /*Removes default margin from all elements*/
+    padding: 0;/*Removes default padding from all elements*/
+    box-sizing: border-box;
+}
+.container{
+    margin: 0 auto; /* center's the container horizontally*/
+    max-width: 900px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/*Navbar Styling*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+    .logo{
+        color: white;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    /*Navigation links styling*/
+    .nav-links{
+        list-style: none;
+        display: flex;
+    }
+
+    .nav-links li{
+        margin-left: 15px;
+    }
+
+    .nav-links a{
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .nav-links a:hover{
+        color: #0073e6;
+    }
+
+    /*Header Section*/
+
+    .header{
+        background-color: #0073e6;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1{
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+
+    .tagline {
+        font-style: italic;
+        margin-bottom: 20px;
+    }
+
+    .cta-button{
+        background-color: #ff6347;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .cta-button:hover{
+        background-color: #ff4500;
+    }
+
+    /*Content Section*/
+    .content {
+        margin: 20px 0;
+    }
+
+    .section{
+        margin-bottom: 25px;
+    }
+
+    .section h2{
+        color: #0073e6;
+    }
+
+    /*Section Paragraph and text in the content section*/
+    .section p{
+        line-height: 1.6;
+        color: #333;
+    }
+
+    /*Profile Image*/
+    .profile-img {
+        width: 150px;             /* Fixed width for consistent sizing */
+        height: 150px;            /* Fixed height for consistent sizing */
+        border-radius: 50%;       /* Fully rounds the image into a circle */
+        margin-top: 10px;         /* Adds space above image */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow to lift image off page */
+      }
+
+      /* 
+        * Skills list styling.
+        * Square bullets give a traditional, organized look.
+        */
+    .skills ul {
+        list-style-type: square;  /* Sets square bullet points for structure */
+        margin: 10px 0;           /* Adds spacing around list */
+        padding-left: 20px;       /* Indents list to align neatly */
+        color: #555;              /* Medium gray for readable list items */
+    }
+    
+    .skills li {
+        margin: 5px 0;            /* Adds vertical space between list items */
+    }
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border-top: 2px solid #555;
+    margin-top: 20px;
+}
+  
+  .footer a {
+    color: #0073e6;
+    text-decoration: none;
+    margin: 0 10px;
+    }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }

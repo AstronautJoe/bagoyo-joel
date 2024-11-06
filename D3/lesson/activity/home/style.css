@@ -1,0 +1,42 @@
+*{
+    margin: 0; /*Removes default margin from all elements*/
+    padding: 0;/*Removes default padding from all elements*/
+    box-sizing: border-box; /*Include padding and border in total size*/
+}
+
+nav{
+    width: 100vw;
+    height: 50px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+    .logo{
+        height: 50px;
+        margin-left: 5vw;
+    }
+
+    .navlinks{
+        list-style: none;
+        display: flex;
+    }
+
+    .navlinks a{
+        text-decoration: none;
+    }
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+
+

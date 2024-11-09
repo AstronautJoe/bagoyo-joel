@@ -2,6 +2,7 @@
     margin: 0; /*Removes default margin from all elements*/
     padding: 0;/*Removes default padding from all elements*/
     box-sizing: border-box; /*Include padding and border in total size*/
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -9,20 +10,47 @@
     --secondary-yellow: #fac031;
     --tertiary-black: #0e100f;
     scrollbar-color: var(--secondary-yellow) var(--primary-white);
+    overflow: scroll;
+    scroll-snap-type: y mandatory; /*Scroll snapping vertically*/
+    scroll-behavior: smooth;
 }
 
 
 body{
-    height: 100vh;
-    width: 100vw;   
+    height: fit-content;
+    width: 100vw;
 }
 
-.yellowed-font{
+/*General*/
+section{
+    scroll-snap-align: start;
+    scroll-margin: 2rem;
+}
+
+section.our-gallery, section.order-now, section.customer-review{
+    scroll-margin: 4rem;
+    
+}
+
+.emphasis-text{
     color: var(--secondary-yellow);
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+h2{
+    font-size: 70px;
+    margin-bottom: 10px;
+    color: var(--tertiary-black);
+}
+
+header{
+    position: sticky;
+    top: 0;
 }
 
 nav{
-    width: 100vw;
+    width: 100%;
     height: 60px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
     background-color: white;
@@ -54,6 +82,16 @@ nav{
         margin-right: 15px;
     }
 
+/* Highlight active link based on :target */
+    nav a:hover{
+        color: var(--secondary-yellow);
+    }
+
+    nav a:active{
+        color: var(--secondary-yellow);
+        text-decoration: underline;
+    }
+
 
 /*Hero Banner*/
 .hero-banner, .about-us{
@@ -63,11 +101,6 @@ nav{
 
     .landing-copy, .about-us-copy{
         margin-top: 50px;
-    }
-
-    h2{
-        font-size: 70px;
-        margin-bottom: 10px;
     }
 
     .landing-copy p{
@@ -108,13 +141,12 @@ section.our-menu{
 
 .our-menu h2{
     text-align: center;
-    color: var(--tertiary-black);
 }
 
 .menu-grid-container{
     display: grid;
     grid-template-columns: 20vw 20vw 20vw 20vw;
-    grid-template-rows: 500px 500px 500px 500px;
+    grid-template-rows: 500px 500px;
     width: fit-content;
     margin: 0 auto;
     /* background-color: #2196F3; */
@@ -151,7 +183,6 @@ section.our-menu{
 
     .menu-grid-item p{
         font-size: 15px;
-        /* display: inline-block; */
     }
 
     .menu-grid-item .price{
@@ -177,6 +208,246 @@ section.our-menu{
         border: none;
         color: var(--primary-white);
     }
+
+section.our-gallery{
+    width: 100%;
+    padding: 0 2vw;
+    margin-bottom: 10vh;
+}
+
+/*Our Galllery Section*/
+.our-gallery h2{
+    text-align: center;
+}
+
+.our-gallery .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 10px;
+    gap: 5px 5px;
+}
+
+    .our-gallery .grid-item{
+        height: fit-content;
+        color: black;
+    }
+
+    .our-gallery p{
+        color: black;
+    }
+
+    .our-gallery img{
+        object-fit: cover;
+        width: 100%;
+        height: 40vh;
+    }
+
+/*Customer Review Section*/
+section.customer-review{
+    margin-bottom: 10vh;
+}
+.customer-review h2{
+    text-align: center;
+}
+.customer-review .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 10px;
+    gap: 5px 5px;
+}
+
+    .customer-review .grid-item{
+        height: fit-content;
+        color: black;
+        box-shadow: 0px 3px 15px rgba(181, 181, 181, 0.5);
+        padding: 2vh 2vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .customer-review p{
+        color: black;
+    }
+
+    .customer-review img{
+        width: auto;
+        height: 20vh;
+        border-radius: 50%;
+        border: 5px solid gray;
+    }
+
+    .reviewer-name{
+        font-weight: bold;
+        font-size: larger;
+    }
+
+    /*Star Rating*/
+    .customer-review .star-rating{
+        width: auto;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .customer-review .star-rating i{
+        font-size: 1vw;
+        color: var(--secondary-yellow)
+    }
+
+/*Order Now Section*/
+.order-now h2{
+    text-align: center;
+}
+
+section.order-now{
+    background-image: url(../image_assets/bg2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 10px;
+}
+
+.order-now h2{
+    text-align: center;
+}
+
+
+.order-now .flexbox-container{
+    display: flex;
+    align-items: center;
+}
+
+.order-now img, .order-now form{
+    width: 50%;
+    padding: 10px 5vw;
+}
+
+    /*Form field CSS*/
+    .order-now .form-field{
+        display: inline-block;
+        width: 40%;
+        margin: 0 4px 10px 0;
+    }
+
+    .order-now label{
+        display: block;
+    }
+
+    .order-now input{
+        width: 100%;
+        background-color: rgba(201, 201, 201, 0.605);
+        border-radius: 2px;
+        border: 1px solid rgba(147, 147, 147, 0.5);
+        padding: 5px 10px;
+    }
+
+/*Our Team Section*/
+section.our-team{
+    background-image: url(../image_assets/bg1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 10px;
+    height: 70vh;
+}
+
+    .our-team h2{
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .our-team .container{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .our-team .outer-frame{
+        padding: 10px;
+        outline: 5px solid rgba(128, 128, 128, 0.483);
+        border-radius: 50%; 
+    }
+
+    .our-team .image-frame{
+       width: 20vw;
+       height: 20vw;
+       overflow:hidden; /*To Crop out overflow*/
+       border-radius: 50%;
+       border: 5px solid rgba(128, 128, 128, 0.43);
+    }
+
+    .our-team img{
+        width: 100%;
+        height: auto;
+    }
+
+    .our-team img[src*="../image_assets/chef4.jpg"]{
+        width: auto;/*Width will be cut out and adjusted*/
+        height: 100%;/*Maintain whole height of image*/
+        margin-left: -60px;
+    }
+
+/*Footer*/
+footer{
+    background-color: grey;
+    height: 30vh;
+    padding: 20px;
+    gap: 30px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+    footer > div{
+        flex: 1;
+        height: 100%;
+        text-align: center;
+    }
+
+    footer ul{
+        list-style-type: none;
+        margin-top: 10px;
+    }
+
+    footer li{
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    footer strong{/*strong tag is by default inline element meaning no width and height of its own*/
+        font-size:x-large;
+    }
+
+    /*Social Media Links*/
+    footer .social-media ul{
+        display: flex;
+        gap: 5px;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

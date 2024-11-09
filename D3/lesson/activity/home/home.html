@@ -12,12 +12,12 @@
             <img src="../image_assets/logo.png" alt="Logo" class="logo">
             </img>
             <ul class="nav-links">
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Menu">Menu</a></li>
-                <li><a href="#Gallery">Gallery</a></li>
-                <li><a href="#Review">Review</a></li>
-                <li><a href="#Order">Order</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-us">About</a></li>
+                <li><a href="#our-menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#customer-review">Review</a></li>
+                <li><a href="#order-now">Order</a></li>
             </ul>
 
             <ul class="nav-actions">
@@ -29,9 +29,9 @@
     </header>
     
     <!--Section: Hero Banner-->
-    <section class="hero-banner">
-        <section class="landing-copy">
-            <h2>Get Fresh <span>Food</span> in an Easy Way</h2>
+    <section class="hero-banner" id="home">
+        <div class="landing-copy">
+            <h2>Get Fresh <span class="emphasis-text">Food</span> in an Easy Way</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                 industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
                 scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
@@ -39,19 +39,19 @@
                 release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
                 software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             <button class="cta-button">Order Now ></button>
-        </section>
-        <section class="landing-image">
+        </div>
+        <div class="landing-image">
             <img src="../image_assets/main_img.png">
-        </section>
+        </div>
     </section>
     
     <!--Section: About Us-->
-    <section class="about-us">
-        <section class="about-us-image">
+    <section class="about-us" id="about-us">
+        <div class="about-us-image">
             <img src="../image_assets/Food-Plate.png">
-        </section>
-        <section class="about-us-copy">
-            <h2>About <span>Us</span></h2>
+        </div>
+        <div class="about-us-copy">
+            <h2>About <span class="emphasis-text">Us</span></h2>
             <h3>Why Choose Us</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                 industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
@@ -60,12 +60,12 @@
                 release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
                 software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             <button class="cta-button">Order Now ></button>
-        </section>
+        </div>
     </section>
     
     <!--Section: Our Menu-->
-    <section class="our-menu">
-        <h2>Our <span class="yellowed-font">Menu</span></h2>
+    <section class="our-menu" id="our-menu">
+        <h2>Our <span class="emphasis-text">Menu</span></h2>
         <div class="menu-grid-container">
             <div class="menu-grid-item">
                 <img src="../image_assets/buger.jpg" class="menu-grid-image">
@@ -190,69 +190,247 @@
         </div>
     </section>
     
-    <section class="gallery">
-        <section class="landing-copy">
-            <h2>Get Fresh <span>Food</span> in an Easy Way</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <button class="cta-button">Order Now ></button>
-        </section>
-        <section class="landing-image">
-            <img src="../image_assets/main_img.png">
-        </section>
-        </section>
+    <section class="our-gallery" id="gallery">
+        <h2>Our <span class="emphasis-text">Gallery</span></h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="../image_assets/gallary_1.jpg">
+            </div>
+            <div class="grid-item">
+                <img src="../image_assets/gallary_2.jpg">
+            </div>
+            <div class="grid-item">
+                <img src="../image_assets/gallary_3.jpg">
+            </div>
+            <div class="grid-item">
+                <img src="../image_assets/gallary_4.jpg">
+            </div>
+            <div class="grid-item">
+                <img src="../image_assets/gallary_5.jpg">
+            </div>
+            <div class="grid-item">
+                <img src="../image_assets/gallary_6.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="customer-review" id="customer-review">
+        <h2>Customer <span class="emphasis-text">Review</span></h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <div class="image-frame">
+                    <img src="../image_assets/review_1.png">
+                </div>
+                <p class="reviewer-name">John Deo</p>
+                <div class="star-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p class="reviewer-comment">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua
+                </p>
+            </div>
+            <div class="grid-item">
+                <div class="image-frame">
+                    <img src="../image_assets/review_2.png">
+                </div>
+                <p class="reviewer-name">John Deo</p>
+                <div class="star-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p class="reviewer-comment">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua
+                </p>
+            </div>
+            <div class="grid-item">
+                <div class="image-frame">
+                    <img src="../image_assets/review_3.png">
+                </div>
+                <p class="reviewer-name">John Deo</p>
+                <div class="star-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p class="reviewer-comment">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua
+                </p>
+            </div>
+            <div class="grid-item">
+                <div class="image-frame">
+                    <img src="../image_assets/review_4.png">
+                </div>
+                <p class="reviewer-name">John Deo</p>
+                <div class="star-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p class="reviewer-comment">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua
+                </p>
+            </div>
+        </div>
+    </section>
     
-    <section class="home">
-        <section class="landing-copy">
-            <h2>Get Fresh <span>Food</span> in an Easy Way</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <button class="cta-button">Order Now ></button>
-        </section>
-        <section class="landing-image">
-            <img src="../image_assets/main_img.png">
-        </section>
+
+    <section class="order-now" id="order-now">
+        <h2><span class="emphasis-text">Order</span> Now</h2>
+        <div class="flexbox-container">
+            <img src="../image_assets/order_image.png">
+            <form class="order-form">
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="your name">
+                </div>
+                <div class="form-field">
+                    <label for="name">Email</label>
+                    <input type="text" placeholder="your email">
+                </div>
+                <div class="form-field">
+                    <label for="number">Number</label>
+                    <input type="text" placeholder="your number">
+                </div>
+                <div class="form-field">
+                    <label for="how-much">How Much</label>
+                    <input type="number" placeholder="how much">
+                </div>
+                <div class="form-field">
+                    <label for="order">Your Order</label>
+                    <input type="text" placeholder="food name">
+                </div>
+                <div class="form-field">
+                    <label for="name">Address</label>
+                    <input type="text" placeholder="your address">
+                </div>
+                <button class="cta-button">Order Now ></button>
+            </form>
+            
+        </div>
     </section>
 
-    <section class="order">
-        <section class="landing-copy">
-            <h2>Get Fresh <span>Food</span> in an Easy Way</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <button class="cta-button">Order Now ></button>
-        </section>
-        <section class="landing-image">
-            <img src="../image_assets/main_img.png">
-        </section>
-    </section>
-    <section class="review">
-        <section class="landing-copy">
-            <h2>Get Fresh <span>Food</span> in an Easy Way</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <button class="cta-button">Order Now ></button>
-        </section>
-        <section class="landing-image">
-            <img src="../image_assets/main_img.png">
-        </section>
+    <section class="our-team">
+        <h2>Our <span class="emphasis-text">Team</span></h2>
+        <div class="container">
+            <div class="outer-frame">
+                <div class="image-frame">
+                    <img src="../image_assets/chef1.png">
+                </div>
+            </div>
+            <div class="outer-frame">
+                <div class="image-frame">
+                    <img src="../image_assets/chef2.png">
+                </div>
+            </div>
+            <div class="outer-frame">
+                <div class="image-frame">
+                    <img src="../image_assets/chef3.jpg">
+                </div>
+            </div>
+            <div class="outer-frame">
+                <div class="image-frame">
+                    <img src="../image_assets/chef4.jpg">
+                </div>
+            </div>
+        </div>
     </section>
 
+    <footer>
+        <div class="location">
+            <strong>Location</strong>
+            <ul>
+                <li>Sri Lanka</li>
+                <li>USA</li>
+                <li>India</li>
+                <li>Japan</li>
+                <li>Italy</li>
+            </ul>
+        </div>
+        <div class="Quick-link">
+            <strong>Quick Link</strong>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Menu</li>
+                <li>Gallery</li>
+                <li>Order</li>
+            </ul>
+        </div>
+        <div class="Contact">
+            <strong>Contact</strong>
+            <ul>
+                <li>+94 12 3456 789</li>
+                <li>+94 25 5568456</li>
+                <li>johndeo123@gmail.com</li>
+                <li>Gallery</li>
+                <li>foodshop123@gmail.com</li>
+            </ul>
+        </div>
+        <div class="Our Service">
+            <strong>Our Service</strong>
+            <ul>
+                <li>Fast Delivery</li>
+                <li>Easy Payments</li>
+                <li>24 x 7 Service</li>
+            </ul>
+        </div>
+        <div class="social-media">
+            <strong>Follows</strong>
+            <ul>
+                <li><i class="fa-brands fa-facebook-f"></i></li>
+                <li><i class="fa-brands fa-twitter"></i></li>
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 </html>

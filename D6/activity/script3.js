@@ -162,6 +162,44 @@ console.log(calculateFactorial(5));
 
 //   console.log(calculateFactorial(5));  // Output: 120
 
-function isPalindrome(){
-    
+function isPalindrome(string) {
+  let reversedString = string.split('').reverse().join('');
+  if (string.toLowerCase() === reversedString.toLowerCase()) {
+    return true;
+  } else {
+    return false;
+  }
 }
+console.log(isPalindrome('level'));
+
+function sumArray(array) {
+  let sum = array[0];
+  for (i = 1; i < array.length; i++) {
+    sum += array[i];
+  }
+  return sum;
+}
+console.log(sumArray([1, 2, 3, 4, 5]));
+
+function capitalizeFirstLetter(string) {
+  //break into array elements
+  let stringArray = string.split('');
+  //capitalize the first array element
+  let capitalizedFirstLetter = stringArray[0].toUpperCase();
+  //change the first array element into the capitalized one
+  stringArray[0] = capitalizedFirstLetter;
+
+  return stringArray.join('');
+}
+console.log(capitalizeFirstLetter('javascript'));
+
+function filterEvenNumbers(numberArray) {
+  filteredArray = [];
+  for (i = 0; i < numberArray.length; i++) {
+    if (numberArray[i] % 2 === 0) {
+      filteredArray.push(numberArray[i]);
+    }
+  }
+  return filteredArray;
+}
+console.log(filterEvenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));

@@ -4,6 +4,23 @@
 const button = document.querySelector('#btn');
 button.addEventListener('click', handleClick);
 
-function handleClick() {
+function handleClick(event) {
   console.log('The button works');
+  console.log('Event Object: ', event);
+  console.log('Event Type: ', event.type);
+  console.log('Target Element:', event.target);
+}
+
+// Register a submit event listener on a form
+const form = document.getElementById('myForm');
+form.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const nameInput = document.getElementById('name');
+  const name = nameInput.value;
+  console.log(`Submitted name: ${name}`);
+
+  // clear input value;
+  nameInput.value = '';
 }

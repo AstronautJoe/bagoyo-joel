@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Activity 1: Loan Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="heading">Loan Calculator</h1>
+    <div class="container">
+        <form id="loan-form">
+            <label for="loanAmount">Loan Amount</label>
+            <input type="number" min="0" class="loan-amount" id="loan-amount">
+
+            <label for="interestRate">Interest Rate(%)</label>
+            <input type="number" min="0" class="interest-rate">
+
+            <label for="loanTerm">Loan Term (Years)</label>
+            <input type="number" min="0" class="loan-term">
+
+            <input type="submit" value="Calculate">
+        </form>
+        <div class="answer">
+            <p style="font-weight: bold;" class="loan-output">Hello</p>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day 7: Activity 3 - Shopping Cart</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <h1 id="heading">Shopping Cart</h1>
+    <section class="cart">
+        <h2>Your Cart</h2>
+        <ul class="cart-item-list">
+        </ul>
+        <p class="total">Total: $0</p>
+    </section>
+    <section class="products">
+        <h2>Products</h2>
+        <ul class="product-list">
+            <li product-id="1">
+                <p class="product-name">Product 1</p>
+                <p class="product-price">Price: 10$</p>
+                <button class="add-to-cart-btn" onclick="addToCart(1)">Add to Cart</button>
+            </li>
+            <li product-id="2">
+                <p class="product-name">Product 2</p>
+                <p class="product-price">Price: 15$</p>
+                <button class="add-to-cart-btn" onclick="addToCart(2)">Add to Cart</button>
+            </li>
+            <li product-id="3">
+                <p class="product-name">Product 3</p>
+                <p class="product-price">Price: 20$</p>
+                <button class="add-to-cart-btn" onclick="addToCart(3)">Add to Cart</button>
+            </li>
+        </ul>
+
+    </section>
+    <script src="script3.js"></script>
+</body>
+</html> 

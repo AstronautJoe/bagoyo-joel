@@ -1,0 +1,47 @@
+/* General Reset */
+*{
+    margin: 0; /*Removes default margin from all elements*/
+    padding: 0;/*Removes default padding from all elements*/
+    box-sizing: border-box; /*Include padding and border in total size*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Root Styles */
+body{
+    height: 100%;
+    width: 100%;
+    padding: 20px 20vw;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+section{
+    margin-bottom: 10px;
+}
+
+.products p, .products button{
+    display: inline-block;
+}
+
+/*Cart Row*/
+.cart-row{
+    background-color: purple;
+}
+
+.cart-item-list li{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.total{
+    font-weight: bold;
+}
+

@@ -1,0 +1,48 @@
+List down the commands for each step. Starting at step 3
+
+Step 2: In MongoDB Compass, create a new database called "Bookstore" and a collection called "Books".
+
+Step 3: Perform the following CRUD operations using MongoDB Compass:
+
+a) Create Operation:
+Insert at least three book documents with different fields such as title, author, genre, and publication year.
+Ans:
+db.Books.insertMany([
+    {
+        title: "Pride and Prejudice", author: "Jane Austen", genre: "Romance", publicationYear: 1813
+    },
+    {
+        title: "1984", author: "George Orwell", genre: "Dystopian", publicationYear: 1949
+    },
+    {
+        title: "To Kill a Mockingbird", author: "Harper Lee", genre: "Southern Gothic", publicationYear: 1960
+    },
+]);
+Note should be an array of documents inserted in []
+
+
+b) Read Operation:
+Retrieve all the book documents in the "Books" collection.
+Ans:
+db.Books.find();
+
+Retrieve a specific book document based on its title or author.
+Ans:
+Find a book with the word 'and' in its title 
+db.Books.find({title: {$regex: "and"}}, {_id: 0});
+
+c) Update Operation:
+Update the genre of a book document.
+db.Books.updateOne({title: "Pride and Prejudice"}, {$set: {genre: "Horror"}})
+
+Update the publication year of a book document.
+db.Books.updateOne({title: "Pride and Prejudice"}, {$set: {publicationYear: 2000}})
+
+d) Delete Operation:
+Delete a book document based on its title or author.
+"To delete a book with the word "and" in its title"
+db.Books.deleteOne({title: {$regex: "and"}})
+
+Step 4: After each operation, verify the changes by re-reading the data from the "Books" collection.
+
+Note: Remember to clean up the cluster and delete the "Bookstore" database if no longer needed.

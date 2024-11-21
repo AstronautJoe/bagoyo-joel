@@ -250,7 +250,7 @@ db.categories.aggregate([
     },
     {
         $project: {
-            course_name: "$name",                                        // Include the category name
+            category_name: "$name",                                        // Include the category name
             course_count: { $size: "$courses_in_category" } // Count the number of courses in each category
         }// We use size to count the number of courses in the array instead of $sum: 1
     }
@@ -258,17 +258,17 @@ db.categories.aggregate([
 RESULTS:
 {
   _id: ObjectId('673ddb143f85f6222df2bc61'),
-  course_name: 'Programming',
+  category_name: 'Programming',
   course_count: 1
 }
 {
   _id: ObjectId('673ddb143f85f6222df2bc62'),
-  course_name: 'Data Science',
+  category_name: 'Data Science',
   course_count: 1
 }
 {
   _id: ObjectId('673ddb143f85f6222df2bc63'),
-  course_name: 'Design',
+  category_name: 'Design',
   course_count: 0
 }
 

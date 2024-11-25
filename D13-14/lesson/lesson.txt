@@ -1,0 +1,23 @@
+Retrieve only product names and prices:
+db.products.find({}, {_id: 0, name: 1, price: 1})
+
+Aggregation Pipelines
+Find the total quantity ordered by each customer
+db.orders.aggregate([
+    {
+        $group: {
+            "_id": "$customerId", 
+            "totalQuantity": {"$sum": "$quantity"}
+        }
+    },
+])
+
+Find the average price per category:
+db.products.aggregate([
+    {
+        "$group": {
+            "_id": "$category", 
+            "averagePrice": { "$avg": "$price" } 
+         } 
+    }
+])

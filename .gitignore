@@ -1,2 +1,4 @@
 .mongodb_credentials/
 mongodb_credentials/credentials.txt
+.env
+node_modules/

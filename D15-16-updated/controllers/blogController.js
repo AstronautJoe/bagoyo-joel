@@ -77,8 +77,8 @@ const deleteBlogById = async (request, response) => {
     const { id } = request.params;
     const blog = await Blog.findById(id);
 
-    console.log("User' id is: ", request.user._id);
-    console.log("Blog's author ID is: ", blog.author.toString());
+    // console.log("User' id is: ", request.user._id);
+    // console.log("Blog's author ID is: ", blog.author.toString());
     if (!blog) return response.status(404).json({ error: 'Blog not found' });
 
     if (blog.author.toString() !== request.user._id)

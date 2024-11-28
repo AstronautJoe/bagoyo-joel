@@ -63,7 +63,7 @@ const updateBlogById = async (request, response) => {
     response.status(200).json(blog);
 
     // checking request.user contents
-    console.log(request.user);
+    // console.log(request.user);
   } catch (error) {
     response
       .status(500)

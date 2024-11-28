@@ -7,8 +7,8 @@ const addComment = async (request, response) => {
     const { commentText } = request.body;
     const blog = await Blog.findById(blogId);
 
-    console.log("User's id is: ", request.user._id);
-    console.log("Blog's id is: ", blogId);
+    // console.log("User's id is: ", request.user._id);
+    // console.log("Blog's id is: ", blogId);
 
     if (!blog) {
       return response.status(404).json({ error: 'Blog post not found' });
@@ -56,11 +56,15 @@ const deleteCommentById = async (request, response) => {
     if (!comment) {
       return response.status(404).json({ error: 'Comment not found!' });
     }
-    if (comment.user._id !== request.user._id) {
+    if (comment.user._id.toString() !== request.user._id) {
+      // console.log('comment.user._id:', comment.user._id.toString());
+      // console.log('request.user._id:', request.user._id);
       return response
         .status(404)
         .json({ error: 'Not authorized to delete that comment' });
     }
+    await comment.deleteOne();
+    response.status(200).json({ message: 'Comment deleted' });
     
   } catch (error) {
     response

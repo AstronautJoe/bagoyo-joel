@@ -5,8 +5,6 @@ const Home = () => (
   <div className="text-center mt-5">
     <h1>Get your products here!</h1>
     <Products />
-
-    {/* product grid with filter*/}
   </div>
 );
 

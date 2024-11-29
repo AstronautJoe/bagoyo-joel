@@ -1,8 +1,8 @@
-import React from 'react';
+// import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const MemberListRow = ({ memberId, memberName, memberRole, memberEmail }) => {
+const MemberListRow = ({ memberId, memberName }) => {
   return (
     <Link to={`/members/${memberId}`} className="text-decoration-none">
       <div className="card mb-3" key={memberId}>

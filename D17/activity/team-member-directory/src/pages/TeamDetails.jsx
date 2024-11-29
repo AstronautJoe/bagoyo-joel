@@ -1,4 +1,3 @@
-import React from 'react';
 import { useParams } from 'react-router-dom';
 import TEAMDATA from '../team-data/team-data';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import TEAMDATA from '../team-data/team-data';
 import MemberList from '../components/MemberList';
 import { Outlet, useLocation } from 'react-router-dom';

@@ -1,20 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-// const handleClick = () => {};
+import { Link } from 'react-router-dom';
 
 const MemberListRow = ({ memberId, memberName, memberRole, memberEmail }) => {
   return (
-    <div className="card mb-3" key={memberId}>
-      <div
-        className="card-body pe-auto "
-        onClick={() => {
-          alert('Hello');
-        }}
-      >
-        <p>{memberName}</p>
+    <Link to={`/members/${memberId}`} className="text-decoration-none">
+      <div className="card mb-3" key={memberId}>
+        <div className="card-body pe-auto ">
+          <p>{memberName}</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -5,6 +5,10 @@ import Button from 'react-bootstrap/Button';
 const ProductModal = ({ show, onClose, productId }) => {
   const [product, setProduct] = useState(null);
 
+  // Notes: Why use useEffect?
+  // It runs after every render, not blocking the UI from rendering
+  // It is specially built for handling side effects like data fetching
+  // It can rerun depending on a dependency array, if anything has changed
   useEffect(() => {
     if (productId) {
       const fetchProductDetails = async () => {

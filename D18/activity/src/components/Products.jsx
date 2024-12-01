@@ -1,19 +1,44 @@
 import React, { useState, useEffect } from 'react';
 import ProductModal from './ProductModal';
+import CategoryDropdown from './CategoryDropDown';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedProductId, setSelectedProductId] = useState(null);
+  const [categories, setCategories] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   // Fetch products when the component mounts
   useEffect(() => {
-    const handleSearch = async () => {
+    const fetchProducts = async () => {
       const response = await fetch('https://fakestoreapi.com/products');
       const data = await response.json();
       setProducts(data || []);
     };
-    handleSearch();
+    fetchProducts();
+  }, []);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      const response = await fetch(
+        `https://fakestoreapi.com/products/categories`
+      );
+      const data = await response.json();
+      setCategories(data);
+    };
+    fetchCategories();
+  }, []);
+
+  useEffect(() => {
+    const fetchProductsByCategory = async () => {
+      const response = await fetch(
+        `https://fakestoreapi.com/products/category/${category}`
+      );
+      const data = await response.json();
+      fetchProductsByCategory(data);
+    };
+    fetchProductsByCategory();
   }, []);
 
   const handleClick = (productId) => {
@@ -27,6 +52,7 @@ const Products = () => {
 
   return (
     <div className="mt-5 px-5 py-10">
+      <CategoryDropdown categories={categories} />
       <div className="row">
         {products.map((product) => (
           <div key={product.id} className="col-sm-12 col-md-3 mb-3">

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
+import { useParams } from 'react-router-dom';
 
-const CategoryDropdown = ({ categories, selectedCategory }) => {
-  // const [selectedCategory, setSelectedCategory] = useState(selectedCategory);
+const CategoryDropdown = ({ categories }) => {
+  const { selectedCategory } = useParams();
 
   return (
     <Dropdown>

@@ -1,45 +1,48 @@
 import React, { useState, useEffect } from 'react';
 import ProductModal from './ProductModal';
-import CategoryDropdown from './CategoryDropDown';
+import ProductCard from './ProductCard';
+import { useParams } from 'react-router-dom';
 
 const Products = () => {
+  const { selectedCategory, searchTerm } = useParams();
   const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedProductId, setSelectedProductId] = useState(null);
-  const [categories, setCategories] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState(null);
 
-  // Fetch products when the component mounts
+  // Do not set state directly inside the render cycle like this:
+  // if (searchTerm) {
+  //   setProducts
+  // }
+
+  // Fetch products based on selected category
   useEffect(() => {
+    // TODO: consider adding a try catch to catch API server errors
+    let APIURL = 'https://fakestoreapi.com/products';
     const fetchProducts = async () => {
-      const response = await fetch('https://fakestoreapi.com/products');
+      if (selectedCategory && selectedCategory !== 'all') {
+        APIURL = `https://fakestoreapi.com/products/category/${selectedCategory}`;
+      }
+      const response = await fetch(APIURL);
       const data = await response.json();
       setProducts(data || []);
     };
     fetchProducts();
-  }, []);
+    console.log('fetch products use effect ran');
+  }, [selectedCategory]); // Runs whenever selectedCategory changes
 
+  // Filter products by search term when products or searchTerm changes
   useEffect(() => {
-    const fetchCategories = async () => {
-      const response = await fetch(
-        `https://fakestoreapi.com/products/categories`
+    if (searchTerm) {
+      const searchRegex = new RegExp(searchTerm, 'i');
+      const filtered = products.filter((product) =>
+        searchRegex.test(product.title)
       );
-      const data = await response.json();
-      setCategories(data);
-    };
-    fetchCategories();
-  }, []);
-
-  useEffect(() => {
-    const fetchProductsByCategory = async () => {
-      const response = await fetch(
-        `https://fakestoreapi.com/products/category/${category}`
-      );
-      const data = await response.json();
-      fetchProductsByCategory(data);
-    };
-    fetchProductsByCategory();
-  }, []);
+      setFilteredProducts(filtered);
+    } else {
+      setFilteredProducts(products); // If no search term, show all products
+    }
+  }, [products, searchTerm]); // Runs whenever products or searchTerm changes
 
   const handleClick = (productId) => {
     setSelectedProductId(productId);
@@ -50,43 +53,35 @@ const Products = () => {
     setShowModal((prev) => !prev);
   };
 
+  const displayProducts =
+    filteredProducts.length > 0 ? filteredProducts : products;
+
   return (
-    <div className="mt-5 px-5 py-10">
-      <CategoryDropdown categories={categories} />
+    <>
+      <h2>Products Component</h2>
       <div className="row">
-        {products.map((product) => (
-          <div key={product.id} className="col-sm-12 col-md-3 mb-3">
-            <div className="card p-3">
-              <img
-                src={product.image}
-                className="card-img-top"
-                style={{ height: '200px', objectFit: 'contain' }}
-                alt={product.title}
-              />
-              <div className="card-body">
-                <h5 className="card-title">{product.title}</h5>
-                <h6>${product.price}</h6>
-                <p
-                  onClick={() => handleClick(product.id)} // Pass product ID here
-                  style={{ cursor: 'pointer' }}
-                >
-                  View Details
-                </p>
-              </div>
-            </div>
-          </div>
+        {displayProducts.map((product) => (
+          <ProductCard
+            key={product.id}
+            productId={product.id}
+            productImage={product.image}
+            productTitle={product.title}
+            productPrice={product.price}
+            handleClick={handleClick}
+          />
         ))}
       </div>
-      {/* Pass selectedProductId to ProductModal */}
-      {selectedProductId && (
+      {selectedProductId ? (
         <ProductModal
           show={showModal}
           onClose={toggleModal}
           productId={selectedProductId}
         />
-      )}
-    </div>
+      ) : null}
+    </>
   );
 };
 
 export default Products;
+
+

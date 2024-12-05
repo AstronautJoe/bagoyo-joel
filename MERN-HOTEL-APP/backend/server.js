@@ -20,7 +20,7 @@ const app = express(); // Initialize the Express application.
 app.use(express.json()); // Parses incoming JSON payloads, making it accessible via req.body.
 app.use(express.urlencoded({ extended: true })); // Parses URL-encoded data (e.g., form submissions).
 app.use(cookieParser()); // Enables the server to parse cookies from client requests.
-app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
+app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true })); // ALWAYS CHECK FRONTEND_URL as CORS will only allow from this
 // Configures CORS to allow requests from the frontend URL defined in .env.
 // credentials: true ensures cookies are sent with requests.
 

@@ -24,6 +24,7 @@ const Register = () => {
     formState: { errors }, // Provides validation errors for fields
   } = useForm();
 
+  // Define a mutation to handle the registration API call
   const mutation = useMutation(apiClient.register, {
     onSuccess: () => {
       showToast({ message: 'Registration successful', type: 'SUCCESS' }); // Success toast
@@ -33,6 +34,7 @@ const Register = () => {
       showToast({ message: error.message, type: 'ERROR' }); // Error toast
     },
   });
+
   // Form submission handler
   const onSubmit = handleSubmit((data) => {
     mutation.mutate(data); // Trigger the mutation with form data

@@ -61,6 +61,10 @@ router.post(
       console.log(error); // Log the error for debugging
       res.status(500).json({ message: 'Something went wrong' }); // Return a server error
     }
+
+    router.get('/validate-token', verifyToken, (req, res) => {
+      res.status(200).send({ userId: req.userId });
+    });
   }
 );
 

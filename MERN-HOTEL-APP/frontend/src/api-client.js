@@ -13,6 +13,6 @@ export const register = async (formData) => {
 
   const responseBody = await response.json();
   if (!response.ok) {
-    throw new Error(responseBody.message); // Throw an error if the response is not ok
+    throw new Error(responseBody.message);
   }
 };

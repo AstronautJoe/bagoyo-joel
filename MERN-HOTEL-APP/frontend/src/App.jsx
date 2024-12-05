@@ -1,11 +1,15 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import './App.css';
+import { useState } from 'react';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 import Layout from './layouts/Layout';
 import Register from './pages/Register';
 
-const App = () => {
-  // const [count, setCount] = useState(0);
+function App() {
   return (
     <Router>
       <Routes>
@@ -18,14 +22,6 @@ const App = () => {
           }
         ></Route>
         <Route
-          path="/register"
-          element={
-            <Layout>
-              <Register />
-            </Layout>
-          }
-        ></Route>
-        <Route
           path="/search"
           element={
             <Layout>
@@ -33,9 +29,18 @@ const App = () => {
             </Layout>
           }
         ></Route>
+        <Route
+          path="/register"
+          element={
+            <Layout>
+              <Register />
+            </Layout>
+          }
+        ></Route>
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
   );
-};
+}
 
 export default App;

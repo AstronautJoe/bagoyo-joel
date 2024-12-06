@@ -18,17 +18,14 @@ export const AppContextProvider = ({ children }) => {
   };
 
   // Check if the user is logged in using a token validation query
-  const { isError } = useQuery("validateToken", apiClient.validateToken, {
+  const { isError } = useQuery('validateToken', apiClient.validateToken, {
     retry: false,
   });
 
-  
-
-  
-  
   return (
     <AppContext.Provider
       value={{
+        // These all can be accessed by all components
         showToast,
         isLoggedIn: !isError,
       }}

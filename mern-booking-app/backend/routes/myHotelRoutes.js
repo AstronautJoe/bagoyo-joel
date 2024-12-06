@@ -2,10 +2,18 @@
 import express from 'express';
 import multer from 'multer';
 import { v2 as cloudinary } from 'cloudinary';
-import Hotel from '../models/Hotel';
-import verifyToken from '../middleware/auth';
+import Hotel from '../models/Hotel.js';
+import verifyToken from '../middleware/auth.js';
+import { body } from 'express-validator';
 
 const router = express.Router();
+
+// Cloudinary configuration
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
 // Tell multer to we want to store any files directly to cloudinary
 const storage = multer.memoryStorage();

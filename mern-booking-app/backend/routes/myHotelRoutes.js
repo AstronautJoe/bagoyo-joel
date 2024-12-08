@@ -1,7 +1,7 @@
 // We will be using multer for a multi part form and for images
 import express from 'express';
 import multer from 'multer';
-import { v2 as cloudinary } from 'cloudinary';
+import cloudinary from 'cloudinary';
 import Hotel from '../models/Hotel.js';
 import verifyToken from '../middleware/auth.js';
 import { body } from 'express-validator';

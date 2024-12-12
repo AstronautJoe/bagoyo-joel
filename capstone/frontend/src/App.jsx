@@ -1,12 +1,28 @@
-// import MyIcon from './assets/RiftBuildsTeal.png';
-export default function App() {
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from 'react-router-dom';
+import BaseLayout from './layouts/BaseLayout';
+import Home from './pages/Home';
+
+const App = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-primary">
-      <h1 className="text-4xl font-bold text-secondary mb-4">
-        DaisyUI Theme Test
-      </h1>
-      <img src="src/assets/RiftBuildsIconTeal.png" />
-      <button className="btn btn-success">Click Me!</button>
-    </div>
+    <Router>
+      <Routes>
+        {/* Public Routes */}
+        <Route
+          path="/"
+          element={
+            <BaseLayout>
+              <Home />
+            </BaseLayout>
+          }
+        />
+      </Routes>
+    </Router>
   );
-}
+};
+
+export default App;

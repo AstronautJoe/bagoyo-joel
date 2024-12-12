@@ -84,3 +84,27 @@ module.exports = {
 
 - make sure to include the right filepath for files where you will apply tailwind classnames in this part of tailwind.config.js:
 `content: ['./src/**/*.{js,ts,jsx,tsx}'],`
+
+API Endpoints:
+- RegisterUser
+- LoginUser
+- FetchChampion
+
+
+## For Backend ##
+run
+`npm init -y`
+
+- install dependencies
+`npm install bcryptjs cookie-parser cors dotenv express express-validator jsonwebtoken mongodb mongoose multer`
+
+- dev dependencies
+`npm install nodemon --save-dev`
+
+- make file structure
+```
+- node_modules
+- middleware
+- models
+- routes
+```

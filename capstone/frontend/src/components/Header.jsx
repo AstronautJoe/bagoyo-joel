@@ -4,7 +4,7 @@ import { useAppContext } from '../contexts/AppContext';
 import AppNavBar from './AppNavBar';
 
 const Header = () => {
-  const { isLoggedIn } = useAppContext();
+  // const { isLoggedIn } = useAppContext();
 
   // console.log(isLoggedIn);
   return (

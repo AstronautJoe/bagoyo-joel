@@ -6,6 +6,8 @@ import {
 } from 'react-router-dom';
 import BaseLayout from './layouts/BaseLayout';
 import Home from './pages/Home';
+import LogIn from './pages/LogIn';
+import SignUp from './pages/SignUp';
 
 const App = () => {
   return (
@@ -17,6 +19,22 @@ const App = () => {
           element={
             <BaseLayout>
               <Home />
+            </BaseLayout>
+          }
+        />
+        <Route
+          path="/log-in"
+          element={
+            <BaseLayout>
+              <LogIn />
+            </BaseLayout>
+          }
+        />
+        <Route
+          path="/sign-up"
+          element={
+            <BaseLayout>
+              <SignUp />
             </BaseLayout>
           }
         />

@@ -19,7 +19,7 @@ export const register = async (formData) => {
   return responseBody; // Return the response if successful
 };
 
-export const signIn = async (formData) => {
+export const logIn = async (formData) => {
   const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
     method: 'POST',
     credentials: 'include',
@@ -43,7 +43,7 @@ export const validateToken = async () => {
   });
 
   if (!response.ok) {
-    throw new Error('Token invalid');
+    throw new Error('Token invalid yo!');
   }
 
   return response.json();

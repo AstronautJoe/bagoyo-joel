@@ -9,6 +9,7 @@ const AppContext = createContext(undefined);
 export const AppContextProvider = ({ children }) => {
   // State for toast messages
   const [toast, setToast] = useState(undefined);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Function to show a toast message
   const showToast = (toastMessage) => {
@@ -16,8 +17,10 @@ export const AppContextProvider = ({ children }) => {
   };
 
   // Check if the user is logged in using a token validation query
-  const { isError } = useQuery('validateToken', apiClient.validateToken, {
+  useQuery('validateToken', apiClient.validateToken, {
     retry: false,
+    onError: () => setIsLoggedIn(false),
+    onSuccess: () => setIsLoggedIn(true),
   });
 
   return (
@@ -25,7 +28,7 @@ export const AppContextProvider = ({ children }) => {
       value={{
         // These all can be accessed by all components
         showToast,
-        isLoggedIn: !isError,
+        isLoggedIn,
       }}
     >
       {/* Render the toast component if a toast message is present */}

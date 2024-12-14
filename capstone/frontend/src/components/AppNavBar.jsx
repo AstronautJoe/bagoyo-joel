@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AppNavBar = () => {
   return (
@@ -12,8 +13,12 @@ const AppNavBar = () => {
         </a>
       </div>
       <div className="flex flex-row gap-3 border border-black">
-        <button className="btn btn-md btn-ghost">Sign Up</button>
-        <button className="btn btn-md btn-ghost">Log in</button>
+        <Link to="/sign-up" className="btn btn-md btn-ghost">
+          Sign Up
+        </Link>
+        <Link to="/log-in" className="btn btn-md btn-ghost">
+          Log In
+        </Link>
       </div>
     </div>
   );

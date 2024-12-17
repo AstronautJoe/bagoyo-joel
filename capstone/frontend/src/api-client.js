@@ -31,7 +31,7 @@ export const logIn = async (formData) => {
 
   const body = await response.json();
   if (!response.ok) {
-    throw new Error(body.message);
+    throw new Error('Failed to log in via API', body.message);
   }
   return body;
 };

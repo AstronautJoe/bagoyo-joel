@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAppContext } from '../contexts/AppContext';
 import * as apiClient from '../api-client';
 import { useMutation, useQueryClient } from 'react-query';
+import { Link } from 'react-router-dom';
 
 const LogIn = () => {
   const navigate = useNavigate();
@@ -15,6 +16,10 @@ const LogIn = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
+
+  if (!showToast) {
+    throw new Error('AppContext is not properly initialized.');
+  }
 
   const mutation = useMutation(apiClient.logIn, {
     onSuccess: async () => {
@@ -28,7 +33,11 @@ const LogIn = () => {
     },
     onError: (error) => {
       // show the toast
-      showToast({ message: error.message, type: 'ERROR' });
+      console.error('Login Error:', error);
+      showToast({
+        message: error?.message || 'A login error occured. Please try again.',
+        type: 'ERROR',
+      });
     },
   });
 
@@ -79,16 +88,6 @@ const LogIn = () => {
               {errors.password && (
                 <span className="text-red-500">{errors.password.message}</span>
               )}
-
-              {/* Forgot Password is disabled for now */}
-              {/* <label className="label">
-                <a
-                  href="#"
-                  className="label-text-alt link link-hover text-sm text-gray-500"
-                >
-                  Forgot password?
-                </a>
-              </label> */}
             </div>
 
             <div className="form-control mt-6">
@@ -98,16 +97,11 @@ const LogIn = () => {
             </div>
           </form>
 
-          {/* <div className="divider">OR</div>
-          <button className="btn btn-outline w-full">
-            Continue with Google
-          </button> */}
-
           <p className="text-center text-sm mt-4">
             Don’t have an account?{' '}
-            <a href="#" className="text-primary link link-hover">
-              Sign up
-            </a>
+            <Link to="/sign-up" className="text-primary link link-hover">
+              Sign Up
+            </Link>
           </p>
         </div>
       </div>

@@ -1,9 +1,10 @@
-import React from 'react';
+import { useRef, React } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { useAppContext } from '../contexts/AppContext';
 import * as apiClient from '../api-client';
 import { useMutation, useQueryClient } from 'react-query';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -14,13 +15,16 @@ const SignUp = () => {
     register,
     formState: { errors },
     handleSubmit,
+    watch,
   } = useForm();
+  const password = useRef({}); // To access the elements
+  password.current = watch('password', '');
 
-  const mutation = useMutation(apiClient.logIn, {
+  const mutation = useMutation(apiClient.register, {
     onSuccess: async () => {
       // console.log("User logged in")
       // 1. show the toast
-      showToast({ message: 'Sign Up Successful', type: 'SUCCESS' });
+      showToast({ message: 'Registration Successful', type: 'SUCCESS' });
       // This below is important to check validateToken ONCE only
       await queryClient.invalidateQueries('validateToken');
       // 2. navigate to the home page
@@ -33,7 +37,12 @@ const SignUp = () => {
   });
 
   const onSubmit = handleSubmit((data) => {
-    mutation.mutate(data);
+    // Add the additional/hidden field data
+    const finalData = {
+      ...data,
+      role: 'user', // Add your custom field here
+    };
+    mutation.mutate(finalData);
   });
 
   return (
@@ -47,11 +56,29 @@ const SignUp = () => {
           <form onSubmit={onSubmit}>
             <div className="form-control w-full max-w-xs">
               <label className="label">
+                <span className="label-text">Display Name</span>
+              </label>
+              <input
+                type="text"
+                placeholder="What would you like to be known as?"
+                className="input input-bordered w-full"
+                {...register('displayName', {
+                  required: 'This field is required',
+                })}
+              />
+              {errors.displayName && (
+                <span className="text-red-500">
+                  {errors.displayName.message}
+                </span>
+              )}
+            </div>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
                 <span className="label-text">Email</span>
               </label>
               <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder="Enter your email address"
                 className="input input-bordered w-full"
                 {...register('email', { required: 'This field is required' })}
               />
@@ -66,7 +93,7 @@ const SignUp = () => {
               </label>
               <input
                 type="password"
-                placeholder="Enter your password"
+                placeholder="Enter your desired password"
                 className="input input-bordered w-full"
                 {...register('password', {
                   required: 'This field is required',
@@ -79,35 +106,43 @@ const SignUp = () => {
               {errors.password && (
                 <span className="text-red-500">{errors.password.message}</span>
               )}
-
-              {/* Forgot Password is disabled for now */}
-              {/* <label className="label">
-                <a
-                  href="#"
-                  className="label-text-alt link link-hover text-sm text-gray-500"
-                >
-                  Forgot password?
-                </a>
-              </label> */}
+            </div>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">Confirm Password</span>
+              </label>
+              <input
+                type="password"
+                placeholder="Enter your password again"
+                className="input input-bordered w-full"
+                {...register('confirmPassword', {
+                  required: 'This field is required',
+                  validate: (value) => {
+                    return (
+                      value === password.current || 'The passwords do not match'
+                    );
+                  },
+                })}
+              />
+              {errors.confirmPassword && (
+                <span className="text-red-500">
+                  {errors.confirmPassword.message}
+                </span>
+              )}
             </div>
 
             <div className="form-control mt-6">
               <button type="submit" className="btn btn-primary w-full">
-                Login
+                Sign Up
               </button>
             </div>
           </form>
 
-          {/* <div className="divider">OR</div>
-          <button className="btn btn-outline w-full">
-            Continue with Google
-          </button> */}
-
           <p className="text-center text-sm mt-4">
-            Don’t have an account?{' '}
-            <a href="#" className="text-primary link link-hover">
-              Sign up
-            </a>
+            Already have an account?{' '}
+            <Link to="/log-in" className="text-primary link link-hover">
+              Log In
+            </Link>
           </p>
         </div>
       </div>

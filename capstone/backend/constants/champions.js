@@ -6,9 +6,9 @@ const CHAMPIONS = [
     name: 'Ashe',
     title: 'Frost Archer',
     assets: {
-      imageThumbnail: '/assets/champions/ashe/thumbnail.webp',
-      videoMP4: '/assets/champions/ashe/mutedVideo.mp4',
-      videoWEBM: '/assets/champions/ashe/mutedVideo.webm',
+      imageThumbnail: '/assets/champions/ashe/champion-thumbnail.webp',
+      videoMP4: '/assets/champions/ashe/champion-intro.mp4',
+      videoWEBM: '/assets/champions/ashe/champion-intro.webm',
     },
     mainRole: 'Duo',
     passive: {
@@ -68,9 +68,9 @@ const CHAMPIONS = [
     name: 'Garen',
     title: 'Might of Demacia',
     assets: {
-      imageThumbnail: '/assets/champions/ashe/thumbnail.webp',
-      videoMP4: '/assets/champions/ashe/mutedVideo.mp4',
-      videoWEBM: '/assets/champions/ashe/mutedVideo.webm',
+      imageThumbnail: '/assets/champions/garen/champion-thumbnail.webp',
+      videoMP4: '/assets/champions/garen/champion-intro.mp4',
+      videoWEBM: '/assets/champions/garen/champion-intro.webm',
     },
     mainRole: 'Solo',
     passive: {
@@ -130,9 +130,9 @@ const CHAMPIONS = [
     name: 'Aatrox',
     title: 'Darkin Blade',
     assets: {
-      imageThumbnail: '/assets/champions/ashe/thumbnail.webp',
-      videoMP4: '/assets/champions/ashe/mutedVideo.mp4',
-      videoWEBM: '/assets/champions/ashe/mutedVideo.webm',
+      imageThumbnail: '/assets/champions/aatrox/champion-thumbnail.webp',
+      videoMP4: '/assets/champions/aatrox/champion-intro.mp4',
+      videoWEBM: '/assets/champions/aatrox/champion-intro.webm',
     },
     mainRole: 'Top',
     passive: {
@@ -191,9 +191,9 @@ const CHAMPIONS = [
     name: 'Soraka',
     title: 'Starchild',
     assets: {
-      imageThumbnail: '/assets/champions/soraka/thumbnail.webp',
-      videoMP4: '/assets/champions/soraka/mutedVideo.mp4',
-      videoWEBM: '/assets/champions/soraka/mutedVideo.webm',
+      imageThumbnail: '/assets/champions/soraka/champion-thumbnail.webp',
+      videoMP4: '/assets/champions/soraka/champion-intro.mp4',
+      videoWEBM: '/assets/champions/soraka/champion-intro.webm',
     },
     mainRole: 'Support',
     passive: {
@@ -257,9 +257,9 @@ const CHAMPIONS = [
     name: 'Warwick',
     title: 'The Uncaged Wrath of Zaun',
     assets: {
-      imageThumbnail: '/assets/champions/warwick/thumbnail.webp',
-      videoMP4: '/assets/champions/warwick/mutedVideo.mp4',
-      videoWEBM: '/assets/champions/warwick/mutedVideo.webm',
+      imageThumbnail: '/assets/champions/warwick/champion-thumbnail.webp',
+      videoMP4: '/assets/champions/warwick/champion-intro.mp4',
+      videoWEBM: '/assets/champions/warwick/champion-intro.webm',
     },
     mainRole: 'Jungle',
     passive: {
@@ -308,6 +308,254 @@ const CHAMPIONS = [
         basicDescription:
           'Warwick leaps to a target, suppressing them for 1.5 seconds and dealing magic damage over time. He heals for all post-mitigation damage dealt during this time.',
         cooldownPerLevel: [75, 65, 55],
+        costPerLevel: {
+          costAmount: [100],
+          resourceType: 'Mana',
+        },
+      },
+    ],
+  },
+  {
+    name: 'Annie',
+    title: 'Dark Child',
+    assets: {
+      imageThumbnail: '/assets/champions/annie/champion-thumbnail.webp',
+      videoMP4: '/assets/champions/annie/champion-intro.mp4',
+      videoWEBM: '/assets/champions/annie/champion-intro.webm',
+    },
+    mainRole: 'Mid',
+    passive: {
+      name: 'Pyromania',
+      image: '/assets/champions/annie/pyromania.webp',
+      basicDescription:
+        'Annie gains a stack of Pyromania each time she casts an ability, stacking up to 4 times. At 4 stacks, her next ability consumes all stacks to additionally stun for 1.25 / 1.5 / 1.75 (based on level) seconds.',
+    },
+    abilities: [
+      {
+        name: 'Disintegrate',
+        image: '/assets/champions/annie/disintegrate.webp',
+        basicDescription:
+          'Annie launches a fireball in the target direction that explodes upon the first enemy hit or reaching maximum range, dealing magic damage to all nearby enemies.',
+        cooldownPerLevel: [4, 4, 4, 4],
+        costPerLevel: {
+          costAmount: [65, 70, 75, 80],
+          resourceType: 'Mana',
+        },
+      },
+      {
+        name: 'Incinerate',
+        image: '/assets/champions/annie/incinerate.webp',
+        basicDescription:
+          'Annie unleashes fire in a cone in the target direction, dealing magic damage to enemies hit.',
+        cooldownPerLevel: [8, 8, 8, 8],
+        costPerLevel: {
+          costAmount: [70, 80, 90, 100],
+          resourceType: 'Mana',
+        },
+      },
+      {
+        name: 'Molten Shield',
+        image: '/assets/champions/annie/molten-shield.webp',
+        basicDescription:
+          'Annie grants a shield to herself and Tibbers for 3 seconds. They also gain bonus movement speed that decays over 3 seconds.',
+        cooldownPerLevel: [14, 13, 12, 11],
+        costPerLevel: {
+          costAmount: [60],
+          resourceType: 'Mana',
+        },
+      },
+      {
+        name: 'Summon: Tibbers',
+        image: '/assets/champions/annie/summon-tibbers.webp',
+        basicDescription:
+          'Annie summons Tibbers at the target location, dealing magic damage to nearby enemies. For the next 20 seconds, Tibbers deals bonus magic damage with his attacks.',
+        cooldownPerLevel: [70, 65, 60],
+        costPerLevel: {
+          costAmount: [100],
+          resourceType: 'Mana',
+        },
+      },
+    ],
+  },
+  {
+    name: 'Master Yi',
+    title: 'Wuju Bladesman',
+    assets: {
+      imageThumbnail: '/assets/champions/master-yi/champion-thumbnail.webp',
+      videoMP4: '/assets/champions/master-yi/champion-intro.mp4',
+      videoWEBM: '/assets/champions/master-yi/champion-intro.webm',
+    },
+    mainRole: 'Jungle',
+    passive: {
+      name: 'Double Strike',
+      image: '/assets/champions/master-yi/double-strike.webp',
+      basicDescription:
+        'Every 4th consecutive basic attack strikes twice for 150% AD physical damage.',
+    },
+    abilities: [
+      {
+        name: 'Alpha Strike',
+        image: '/assets/champions/master-yi/alpha-strike.webp',
+        basicDescription:
+          'Master Yi becomes untargetable and strikes up to 4 enemies near his target, dealing physical damage. If there are no other targets, Alpha Strike can strike the same enemy unit repeatedly, dealing 25% damage with each subsequent strike.',
+        cooldownPerLevel: [17, 16, 15, 14],
+        costPerLevel: {
+          costAmount: [55, 60, 65, 70],
+          resourceType: 'Mana',
+        },
+      },
+      {
+        name: 'Meditate',
+        image: '/assets/champions/master-yi/meditate.webp',
+        basicDescription:
+          'Master Yi channels for up to 4 seconds, gaining damage reduction and healing each second. The heal is increased based on missing health.',
+        cooldownPerLevel: [25, 25, 25, 25],
+        costPerLevel: {
+          costAmount: [50],
+          resourceType: 'Mana',
+        },
+      },
+      {
+        name: 'Wuju Style',
+        image: '/assets/champions/master-yi/wuju-style.webp',
+        basicDescription:
+          'Passive: Master Yi gains 10% AD while Wuju Style is off cooldown. Active: Master Yi’s basic attacks deal bonus true damage for 5 seconds.',
+        cooldownPerLevel: [17, 16, 15, 14],
+        costPerLevel: {
+          costAmount: [0],
+          resourceType: 'No Cost',
+        },
+      },
+      {
+        name: 'Highlander',
+        image: '/assets/champions/master-yi/highlander.webp',
+        basicDescription:
+          "Passive: Takedowns reduce Master Yi's basic ability cooldowns by 70%. Active: Master Yi becomes immune to slows, gains bonus movement speed and bonus attack speed for 7 seconds. Takedowns extend the duration of this ability by 7 seconds.",
+        cooldownPerLevel: [80, 70, 60],
+        costPerLevel: {
+          costAmount: [100],
+          resourceType: 'Mana',
+        },
+      },
+    ],
+  },
+  {
+    name: 'Jinx',
+    title: 'The Loose Cannon',
+    assets: {
+      imageThumbnail: '/assets/champions/jinx/champion-thumbnail.webp',
+      videoMP4: '/assets/champions/jinx/champion-intro.mp4',
+      videoWEBM: '/assets/champions/jinx/champion-intro.webm',
+    },
+    mainRole: 'Bot',
+    passive: {
+      name: 'Get Excited!',
+      image: '/assets/champions/jinx/get-excited.webp',
+      basicDescription:
+        'Scoring a takedown on a champion or structure that Jinx has damaged within the last 3 seconds grants her 150% decaying bonus movement speed and 15% total attack speed for 6 seconds. While Excited, Jinx can exceed the attack speed cap.',
+    },
+    abilities: [
+      {
+        name: 'Switcheroo!',
+        image: '/assets/champions/jinx/switcheroo.webp',
+        basicDescription:
+          'Jinx switches between Pow-Pow, her minigun, and Fishbones, her rocket launcher. Pow-Pow grants bonus attack speed, while Fishbones deals bonus physical damage and has increased attack range and splash damage.',
+        cooldownPerLevel: [1, 1, 1, 1],
+        costPerLevel: {
+          costAmount: [0],
+          resourceType: 'No Cost',
+        },
+      },
+      {
+        name: 'Zap!',
+        image: '/assets/champions/jinx/zap.webp',
+        basicDescription:
+          'Jinx fires a shock blast that deals physical damage to the first enemy hit, granting vision and slowing them for 2 seconds.',
+        cooldownPerLevel: [8, 7, 6, 5],
+        costPerLevel: {
+          costAmount: [50, 60, 70, 80],
+          resourceType: 'Mana',
+        },
+      },
+      {
+        name: 'Flame Chompers!',
+        image: '/assets/champions/jinx/flame-chompers.webp',
+        basicDescription:
+          'Jinx tosses out three chompers that explode on contact with enemy champions, interrupting dashes and rooting them. Enemies hit take magic damage.',
+        cooldownPerLevel: [19, 16, 13, 10],
+        costPerLevel: {
+          costAmount: [70],
+          resourceType: 'Mana',
+        },
+      },
+      {
+        name: 'Super Mega Death Rocket!',
+        image: '/assets/champions/jinx/super-mega-death-rocket.webp',
+        basicDescription:
+          'Jinx fires a mega-rocket that gains damage and speed over the first second. It explodes on the first enemy champion hit, dealing physical damage, with nearby enemies taking reduced damage.',
+        cooldownPerLevel: [60, 50, 40],
+        costPerLevel: {
+          costAmount: [100],
+          resourceType: 'Mana',
+        },
+      },
+    ],
+  },
+  {
+    name: 'Blitzcrank',
+    title: 'Great Steam Golem',
+    assets: {
+      imageThumbnail: '/assets/champions/blitzcrank/champion-thumbnail.webp',
+      videoMP4: '/assets/champions/blitzcrank/champion-intro.mp4',
+      videoWEBM: '/assets/champions/blitzcrank/champion-intro.webm',
+    },
+    mainRole: 'Support',
+    passive: {
+      name: 'Mana Barrier',
+      image: '/assets/champions/blitzcrank/mana-barrier.webp',
+      basicDescription:
+        'Periodically, when Blitzcrank’s health drops below 35%, he generates a shield equal to 30% of his maximum mana, lasting for 10 seconds.',
+    },
+    abilities: [
+      {
+        name: 'Rocket Grab',
+        image: '/assets/champions/blitzcrank/rocket-grab.webp',
+        basicDescription:
+          'Blitzcrank fires his right hand in the target direction, grabbing the first enemy hit and pulling them towards him, stunning them for 0.65 seconds.',
+        cooldownPerLevel: [18, 17, 16, 15],
+        costPerLevel: {
+          costAmount: [80],
+          resourceType: 'Mana',
+        },
+      },
+      {
+        name: 'Overdrive',
+        image: '/assets/champions/blitzcrank/overdrive.webp',
+        basicDescription:
+          'Blitzcrank gains bonus movement speed for 2.5 seconds, decaying to 25%. The ability can be recast for an increased speed boost, but Blitzcrank becomes slowed afterward.',
+        cooldownPerLevel: [10, 10, 10, 10],
+        costPerLevel: {
+          costAmount: [50],
+          resourceType: 'Mana',
+        },
+      },
+      {
+        name: 'Power Fist',
+        image: '/assets/champions/blitzcrank/power-fist.webp',
+        basicDescription:
+          'Blitzcrank empowers his next basic attack within 5 seconds, gaining bonus attack range and causing his attack to critically strike and knock up the target for 1 second.',
+        cooldownPerLevel: [8, 7, 6, 5],
+        costPerLevel: {
+          costAmount: [25],
+          resourceType: 'Mana',
+        },
+      },
+      {
+        name: 'Static Field',
+        image: '/assets/champions/blitzcrank/static-field.webp',
+        basicDescription:
+          'Blitzcrank’s basic attacks mark enemies, detonating after 1 second to deal magic damage. He can also activate this ability to deal magic damage and silence nearby enemies for 0.5 seconds.',
+        cooldownPerLevel: [55, 35, 15],
         costPerLevel: {
           costAmount: [100],
           resourceType: 'Mana',

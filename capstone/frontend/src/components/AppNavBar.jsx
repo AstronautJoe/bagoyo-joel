@@ -7,7 +7,7 @@ const AppNavBar = () => {
       <div className="flex-1">
         <a className="btn btn-ghost h-fit">
           <img
-            src="src/assets/RiftBuildsWhite.png"
+            src="/assets/RiftBuildsWhite.png"
             className="object-contain h-14"
           />
         </a>

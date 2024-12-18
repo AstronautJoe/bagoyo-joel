@@ -1,7 +1,6 @@
 import React from 'react'
 import ChampionGrid from '../components/ChampionGrid';
-import AWS from 'aws-sdk';
-private s3: AWS.S3;
+
 
 const Home = () => {
   return (

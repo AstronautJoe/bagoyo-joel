@@ -5,9 +5,10 @@ const championSchema = new mongoose.Schema(
   {
     name: { type: String, required: true, unique: true },
     title: { type: String, required: true },
-    image: {
-      large: { type: String, required: true },
-      thumbnail: { type: String, required: true },
+    assets: {
+      imageThumbnail: { type: String, required: true },
+      videoMP4: { type: String, required: true },
+      videoWEBM: { type: String, required: true },
     },
     mainRole: { type: String, required: true },
     secondaryRole: { type: String },

@@ -128,7 +128,7 @@ const CHAMPIONS = [
   },
   {
     name: 'Aatrox',
-    title: 'The Darkin Blade',
+    title: 'Darkin Blade',
     assets: {
       imageThumbnail: '/assets/champions/ashe/thumbnail.webp',
       videoMP4: '/assets/champions/ashe/mutedVideo.mp4',
@@ -183,6 +183,134 @@ const CHAMPIONS = [
         costPerLevel: {
           costAmount: [0],
           resourceType: 'No Cost',
+        },
+      },
+    ],
+  },
+  {
+    name: 'Soraka',
+    title: 'Starchild',
+    assets: {
+      imageThumbnail: '/assets/champions/soraka/thumbnail.webp',
+      videoMP4: '/assets/champions/soraka/mutedVideo.mp4',
+      videoWEBM: '/assets/champions/soraka/mutedVideo.webm',
+    },
+    mainRole: 'Support',
+    passive: {
+      name: 'Salvation',
+      basicDescription:
+        'Soraka gains 100% bonus movement speed when moving toward allied champions below 35% health.',
+    },
+    abilities: [
+      {
+        name: 'Starcall',
+        image: '/assets/champions/soraka/starcall.webp',
+        basicDescription:
+          'Soraka calls a star, dealing magic damage and slowing enemies. If an enemy champion is hit, Soraka gains Rejuvenation, healing her over 2.5 seconds. After healing any ally champion 3 times, Starcall is empowered to deal 140% damage in a target area.',
+        cooldownPerLevel: [7, 6, 5, 4],
+        costPerLevel: {
+          costAmount: [45, 50, 55, 60],
+          resourceType: 'Mana',
+        },
+      },
+      {
+        name: 'Astral Infusion',
+        image: '/assets/champions/soraka/astral-infusion.webp',
+        basicDescription:
+          'Soraka heals another allied champion. If Soraka has Rejuvenation, the ally gains Rejuvenation for 2.5 seconds, and the health cost will be reduced by a percentage.',
+        cooldownPerLevel: [5, 4, 3, 2],
+        costPerLevel: {
+          costAmount: [
+            '10% Max Health + 55',
+            '10% Max Health + 60',
+            '10% Max Health + 65',
+            '10% Max Health + 70',
+          ],
+          resourceType: 'Health + Mana',
+        },
+      },
+      {
+        name: 'Equinox',
+        image: '/assets/champions/soraka/equinox.webp',
+        basicDescription:
+          'Soraka creates a zone that deals magic damage and silences enemies. After 1.5 seconds, the zone deals the same damage again and roots enemies.',
+        cooldownPerLevel: [20, 18, 16, 14],
+        costPerLevel: {
+          costAmount: [70],
+          resourceType: 'Mana',
+        },
+      },
+      {
+        name: 'Wish',
+        image: '/assets/champions/soraka/wish.webp',
+        basicDescription:
+          'Soraka heals all allied champions. The heal is increased by 50% for allies below 35% health.',
+        cooldownPerLevel: [100, 90, 80],
+        costPerLevel: {
+          costAmount: [100],
+          resourceType: 'Mana',
+        },
+      },
+    ],
+  },
+  {
+    name: 'Warwick',
+    title: 'The Uncaged Wrath of Zaun',
+    assets: {
+      imageThumbnail: '/assets/champions/warwick/thumbnail.webp',
+      videoMP4: '/assets/champions/warwick/mutedVideo.mp4',
+      videoWEBM: '/assets/champions/warwick/mutedVideo.webm',
+    },
+    mainRole: 'Jungle',
+    passive: {
+      name: 'Eternal Hunger',
+      image: '/assets/champions/warwick/eternal-hunger.webp',
+      basicDescription:
+        "Warwick's basic attacks deal bonus magic damage on-hit. While below 50% maximum health, he heals for 100% of the post-mitigation damage dealt by Eternal Hunger.",
+    },
+    abilities: [
+      {
+        name: 'Jaws of the Beast',
+        image: '/assets/champions/warwick/jaws-of-the-beast.webp',
+        basicDescription:
+          'Warwick lunges at an enemy, dealing magic damage and healing himself for a portion of the damage dealt. If held, Warwick dashes behind the target after biting.',
+        cooldownPerLevel: [6, 6, 6, 6],
+        costPerLevel: {
+          costAmount: [50],
+          resourceType: 'Mana',
+        },
+      },
+      {
+        name: 'Blood Hunt',
+        image: '/assets/champions/warwick/blood-hunt.webp',
+        basicDescription:
+          'Passive: Warwick gains bonus attack speed and movement speed against low-health enemies. Active: Warwick marks the nearest enemy champion, gaining passive bonuses against them for 8 seconds regardless of their current health.',
+        cooldownPerLevel: [80, 70, 60, 50],
+        costPerLevel: {
+          costAmount: [70],
+          resourceType: 'Mana',
+        },
+      },
+      {
+        name: 'Primal Howl',
+        image: '/assets/champions/warwick/primal-howl.webp',
+        basicDescription:
+          'Warwick gains damage reduction for up to 2.5 seconds. Recast: Warwick fears nearby enemies for 1 second, slowing them by 90%.',
+        cooldownPerLevel: [14, 13, 12, 11],
+        costPerLevel: {
+          costAmount: [40],
+          resourceType: 'Mana',
+        },
+      },
+      {
+        name: 'Infinite Duress',
+        image: '/assets/champions/warwick/infinite-duress.webp',
+        basicDescription:
+          'Warwick leaps to a target, suppressing them for 1.5 seconds and dealing magic damage over time. He heals for all post-mitigation damage dealt during this time.',
+        cooldownPerLevel: [75, 65, 55],
+        costPerLevel: {
+          costAmount: [100],
+          resourceType: 'Mana',
         },
       },
     ],

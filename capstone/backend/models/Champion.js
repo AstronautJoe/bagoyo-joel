@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import abilitySchema from './Ability.js';
+import { abilitySchema } from './Ability.js';
 
 const championSchema = new mongoose.Schema(
   {
@@ -10,8 +10,15 @@ const championSchema = new mongoose.Schema(
       videoMP4: { type: String, required: true },
       videoWEBM: { type: String, required: true },
     },
-    mainRole: { type: String, required: true },
-    secondaryRole: { type: String },
+    mainRole: {
+      type: String,
+      enum: ['Duo', 'Support', 'Baron', 'Jungle', 'Mid'],
+      required: true,
+    },
+    secondaryRole: {
+      type: String,
+      enum: ['Duo', 'Support', 'Baron', 'Jungle', 'Mid'],
+    },
     passive: {
       name: {
         type: String,
@@ -29,4 +36,5 @@ const championSchema = new mongoose.Schema(
 
 const Champion = mongoose.model('Champion', championSchema);
 
-export default Champion;
+export { championSchema }; // Named export
+export default Champion;   // Default export

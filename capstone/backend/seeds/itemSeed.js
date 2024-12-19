@@ -1,10 +1,9 @@
 // Run this at the root level of backend folder
-// using the command: 
 import 'dotenv/config';
 import mongoose from 'mongoose';
 
-import Champion from '../models/Champion.js';
-import CHAMPIONS from '../constants/champions.js';
+import Item from '../models/Item.js';
+import ITEMS from '../constants/items.js';
 
 // Connect to MongoDB
 console.log('Mongo URI:', process.env.MONGO_URI); // Add this line for debugging
@@ -18,11 +17,11 @@ mongoose.connection.on('error', (err) => {
 
 const seedDB = async () => {
   // DELETES everything in that collection
-  await Champion.deleteMany({});
-  await Champion.insertMany(CHAMPIONS);
+  await Item.deleteMany({});
+  await Item.insertMany(ITEMS);
 };
 
 seedDB().then(() => {
-  console.log('Successfully seeded CHAMPIONS, now closing connection.');
+  console.log('Successfully seeded ITEMS, now closing connection.');
   mongoose.connection.close();
 });

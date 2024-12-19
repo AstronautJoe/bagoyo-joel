@@ -24,43 +24,63 @@ const CHAMPIONS = [
         basicDescription:
           "Ashe builds up Focus by attacking. At maximum Focus, Ashe can cast Ranger's Focus to consume all stacks of Focus, temporarily increasing her Attack Speed and transforming her basic attack into a powerful flurry attack for the duration.",
         cooldownPerLevel: [7, 6, 5, 4],
-        costPerLevel: {
-          costAmount: [50],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 50,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Volley',
         image: '/assets/champions/ashe/volley.webp',
         basicDescription:
-          'Ashe fires 9 arrows in a cone for increased damage. Also applies Frost Shot..',
+          'Ashe fires 9 arrows in a cone for increased damage. Also applies Frost Shot.',
         cooldownPerLevel: [16, 13.5, 11, 8.5],
-        costPerLevel: {
-          costAmount: [50],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 50,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Hawkshot',
         image: '/assets/champions/ashe/hawkshot.webp',
         basicDescription:
-          'Ashe fires 9 arrows in a cone for increased damage. Also applies Frost Shot..',
+          'Ashe sends her hawk to scout the area. Grants vision as it flies and reveals units it passes over.',
         cooldownPerLevel: [45, 40, 35, 30],
-        costPerLevel: {
-          costAmount: [50],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 50,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Enchanted Crystal Arrow',
         image: '/assets/champions/ashe/enchanted-crystal-arrow.webp',
         basicDescription:
-          'Ashe fires a missile of ice which she can steer in the air. If the arrow collides with an enemy Champion, it deals damage and stuns the Champion, stunning for longer the farther arrow has traveled. In addition, surrounding enemy units take damage and are slowed.',
+          'Ashe fires a missile of ice which she can steer in the air. If the arrow collides with an enemy Champion, it deals damage and stuns the Champion, stunning for longer the farther the arrow has traveled. In addition, surrounding enemy units take damage and are slowed.',
         cooldownPerLevel: [70, 60, 50],
-        costPerLevel: {
-          costAmount: [100],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 50,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
     ],
   },
@@ -86,10 +106,15 @@ const CHAMPIONS = [
         basicDescription:
           'Garen cleanses all slows and gains bonus movement speed. His next attack deals bonus physical damage and silences the target.',
         cooldownPerLevel: [9, 8.5, 8, 7.5],
-        costPerLevel: {
-          costAmount: [0],
-          resourceType: 'No Cost',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 0,
+              isPercentage: false,
+              resourceType: 'no-cost',
+            },
+          ],
+        ],
       },
       {
         name: 'Courage',
@@ -97,10 +122,15 @@ const CHAMPIONS = [
         basicDescription:
           'Garen reduces incoming damage for a few seconds and gains Tenacity for a short duration.',
         cooldownPerLevel: [18, 16, 14, 12],
-        costPerLevel: {
-          costAmount: [0],
-          resourceType: 'No Cost',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 0,
+              isPercentage: false,
+              resourceType: 'no-cost',
+            },
+          ],
+        ],
       },
       {
         name: 'Judgment',
@@ -108,10 +138,15 @@ const CHAMPIONS = [
         basicDescription:
           'Garen spins in a circle, dealing damage to nearby enemies. This attack critically strikes enemies at the edge of its range.',
         cooldownPerLevel: [9, 8, 7, 6],
-        costPerLevel: {
-          costAmount: [0],
-          resourceType: 'No Cost',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 0,
+              isPercentage: false,
+              resourceType: 'no-cost',
+            },
+          ],
+        ],
       },
       {
         name: 'Demacian Justice',
@@ -119,10 +154,15 @@ const CHAMPIONS = [
         basicDescription:
           'Garen calls upon the power of Demacia to execute an enemy champion, dealing more damage to targets with lower health. Nearby enemies take reduced damage.',
         cooldownPerLevel: [70, 65, 60],
-        costPerLevel: {
-          costAmount: [0],
-          resourceType: 'No Cost',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 0,
+              isPercentage: false,
+              resourceType: 'no-cost',
+            },
+          ],
+        ],
       },
     ],
   },
@@ -148,10 +188,15 @@ const CHAMPIONS = [
         basicDescription:
           'Aatrox strikes in the target direction up to three times, each cast dealing increasing damage. Each strike has a sweetspot for bonus damage and knock-up.',
         cooldownPerLevel: [13, 11, 9, 7],
-        costPerLevel: {
-          costAmount: [0],
-          resourceType: 'No Cost',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 0,
+              isPercentage: false,
+              resourceType: 'no-cost',
+            },
+          ],
+        ],
       },
       {
         name: 'Infernal Chains',
@@ -159,10 +204,15 @@ const CHAMPIONS = [
         basicDescription:
           'Aatrox throws a chain that damages and slows the first enemy hit. If it hits a champion or large monster, they are tethered to the impact area. If the target fails to break the tether, they are pulled back to the center and damaged again.',
         cooldownPerLevel: [15, 14, 13, 12],
-        costPerLevel: {
-          costAmount: [0],
-          resourceType: 'No Cost',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 0,
+              isPercentage: false,
+              resourceType: 'no-cost',
+            },
+          ],
+        ],
       },
       {
         name: 'Umbral Dash',
@@ -170,10 +220,15 @@ const CHAMPIONS = [
         basicDescription:
           'Aatrox dashes in the target direction. Passively, he heals for a portion of the damage dealt to enemy champions. This ability can be used during his other abilities without interruption.',
         cooldownPerLevel: [8, 7, 6, 5],
-        costPerLevel: {
-          costAmount: [0],
-          resourceType: 'No Cost',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 0,
+              isPercentage: false,
+              resourceType: 'no-cost',
+            },
+          ],
+        ],
       },
       {
         name: 'World Ender',
@@ -181,10 +236,15 @@ const CHAMPIONS = [
         basicDescription:
           'Aatrox unleashes his true form, gaining bonus attack damage, movement speed, size, and increased healing. During the transformation, champion takedowns extend the duration of his ultimate.',
         cooldownPerLevel: [75, 65, 55],
-        costPerLevel: {
-          costAmount: [0],
-          resourceType: 'No Cost',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 0,
+              isPercentage: false,
+              resourceType: 'no-cost',
+            },
+          ],
+        ],
       },
     ],
   },
@@ -209,10 +269,36 @@ const CHAMPIONS = [
         basicDescription:
           'Soraka calls a star, dealing magic damage and slowing enemies. If an enemy champion is hit, Soraka gains Rejuvenation, healing her over 2.5 seconds. After healing any ally champion 3 times, Starcall is empowered to deal 140% damage in a target area.',
         cooldownPerLevel: [7, 6, 5, 4],
-        costPerLevel: {
-          costAmount: [45, 50, 55, 60],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 45,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+          [
+            {
+              amount: 50,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+          [
+            {
+              amount: 55,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+          [
+            {
+              amount: 60,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Astral Infusion',
@@ -220,15 +306,56 @@ const CHAMPIONS = [
         basicDescription:
           'Soraka heals another allied champion. If Soraka has Rejuvenation, the ally gains Rejuvenation for 2.5 seconds, and the health cost will be reduced by a percentage.',
         cooldownPerLevel: [5, 4, 3, 2],
-        costPerLevel: {
-          costAmount: [
-            '10% Max Health + 55',
-            '10% Max Health + 60',
-            '10% Max Health + 65',
-            '10% Max Health + 70',
+        costPerLevel: [
+          [
+            {
+              amount: 10,
+              isPercentage: true,
+              resourceType: 'max-health',
+            },
+            {
+              amount: 55,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
           ],
-          resourceType: 'Health + Mana',
-        },
+          [
+            {
+              amount: 10,
+              isPercentage: true,
+              resourceType: 'max-health',
+            },
+            {
+              amount: 60,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+          [
+            {
+              amount: 10,
+              isPercentage: true,
+              resourceType: 'max-health',
+            },
+            {
+              amount: 65,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+          [
+            {
+              amount: 10,
+              isPercentage: true,
+              resourceType: 'max-health',
+            },
+            {
+              amount: 70,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Equinox',
@@ -236,10 +363,15 @@ const CHAMPIONS = [
         basicDescription:
           'Soraka creates a zone that deals magic damage and silences enemies. After 1.5 seconds, the zone deals the same damage again and roots enemies.',
         cooldownPerLevel: [20, 18, 16, 14],
-        costPerLevel: {
-          costAmount: [70],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 70,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Wish',
@@ -247,10 +379,15 @@ const CHAMPIONS = [
         basicDescription:
           'Soraka heals all allied champions. The heal is increased by 50% for allies below 35% health.',
         cooldownPerLevel: [100, 90, 80],
-        costPerLevel: {
-          costAmount: [100],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 100,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
     ],
   },
@@ -277,10 +414,15 @@ const CHAMPIONS = [
         basicDescription:
           'Warwick lunges at an enemy, dealing magic damage and healing himself for a portion of the damage dealt. If held, Warwick dashes behind the target after biting.',
         cooldownPerLevel: [6, 6, 6, 6],
-        costPerLevel: {
-          costAmount: [50],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 50,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Blood Hunt',
@@ -288,10 +430,15 @@ const CHAMPIONS = [
         basicDescription:
           'Passive: Warwick gains bonus attack speed and movement speed against low-health enemies. Active: Warwick marks the nearest enemy champion, gaining passive bonuses against them for 8 seconds regardless of their current health.',
         cooldownPerLevel: [80, 70, 60, 50],
-        costPerLevel: {
-          costAmount: [70],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 70,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Primal Howl',
@@ -299,10 +446,15 @@ const CHAMPIONS = [
         basicDescription:
           'Warwick gains damage reduction for up to 2.5 seconds. Recast: Warwick fears nearby enemies for 1 second, slowing them by 90%.',
         cooldownPerLevel: [14, 13, 12, 11],
-        costPerLevel: {
-          costAmount: [40],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 40,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Infinite Duress',
@@ -310,10 +462,15 @@ const CHAMPIONS = [
         basicDescription:
           'Warwick leaps to a target, suppressing them for 1.5 seconds and dealing magic damage over time. He heals for all post-mitigation damage dealt during this time.',
         cooldownPerLevel: [75, 65, 55],
-        costPerLevel: {
-          costAmount: [100],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 100,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
     ],
   },
@@ -339,10 +496,36 @@ const CHAMPIONS = [
         basicDescription:
           'Annie launches a fireball in the target direction that explodes upon the first enemy hit or reaching maximum range, dealing magic damage to all nearby enemies.',
         cooldownPerLevel: [4, 4, 4, 4],
-        costPerLevel: {
-          costAmount: [65, 70, 75, 80],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 65,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+          [
+            {
+              amount: 70,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+          [
+            {
+              amount: 75,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+          [
+            {
+              amount: 80,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Incinerate',
@@ -350,10 +533,36 @@ const CHAMPIONS = [
         basicDescription:
           'Annie unleashes fire in a cone in the target direction, dealing magic damage to enemies hit.',
         cooldownPerLevel: [8, 8, 8, 8],
-        costPerLevel: {
-          costAmount: [70, 80, 90, 100],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 70,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+          [
+            {
+              amount: 80,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+          [
+            {
+              amount: 90,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+          [
+            {
+              amount: 100,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Molten Shield',
@@ -361,10 +570,15 @@ const CHAMPIONS = [
         basicDescription:
           'Annie grants a shield to herself and Tibbers for 3 seconds. They also gain bonus movement speed that decays over 3 seconds.',
         cooldownPerLevel: [14, 13, 12, 11],
-        costPerLevel: {
-          costAmount: [60],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 60,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Summon: Tibbers',
@@ -372,10 +586,15 @@ const CHAMPIONS = [
         basicDescription:
           'Annie summons Tibbers at the target location, dealing magic damage to nearby enemies. For the next 20 seconds, Tibbers deals bonus magic damage with his attacks.',
         cooldownPerLevel: [70, 65, 60],
-        costPerLevel: {
-          costAmount: [100],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 100,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
     ],
   },
@@ -401,10 +620,36 @@ const CHAMPIONS = [
         basicDescription:
           'Master Yi becomes untargetable and strikes up to 4 enemies near his target, dealing physical damage. If there are no other targets, Alpha Strike can strike the same enemy unit repeatedly, dealing 25% damage with each subsequent strike.',
         cooldownPerLevel: [17, 16, 15, 14],
-        costPerLevel: {
-          costAmount: [55, 60, 65, 70],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 55,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+          [
+            {
+              amount: 60,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+          [
+            {
+              amount: 65,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+          [
+            {
+              amount: 70,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Meditate',
@@ -412,10 +657,15 @@ const CHAMPIONS = [
         basicDescription:
           'Master Yi channels for up to 4 seconds, gaining damage reduction and healing each second. The heal is increased based on missing health.',
         cooldownPerLevel: [25, 25, 25, 25],
-        costPerLevel: {
-          costAmount: [50],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 50,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Wuju Style',
@@ -423,10 +673,15 @@ const CHAMPIONS = [
         basicDescription:
           'Passive: Master Yi gains 10% AD while Wuju Style is off cooldown. Active: Master Yi’s basic attacks deal bonus true damage for 5 seconds.',
         cooldownPerLevel: [17, 16, 15, 14],
-        costPerLevel: {
-          costAmount: [0],
-          resourceType: 'No Cost',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 0,
+              isPercentage: false,
+              resourceType: 'no-cost',
+            },
+          ],
+        ],
       },
       {
         name: 'Highlander',
@@ -434,10 +689,15 @@ const CHAMPIONS = [
         basicDescription:
           "Passive: Takedowns reduce Master Yi's basic ability cooldowns by 70%. Active: Master Yi becomes immune to slows, gains bonus movement speed and bonus attack speed for 7 seconds. Takedowns extend the duration of this ability by 7 seconds.",
         cooldownPerLevel: [80, 70, 60],
-        costPerLevel: {
-          costAmount: [100],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 100,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
     ],
   },
@@ -463,10 +723,15 @@ const CHAMPIONS = [
         basicDescription:
           'Jinx switches between Pow-Pow, her minigun, and Fishbones, her rocket launcher. Pow-Pow grants bonus attack speed, while Fishbones deals bonus physical damage and has increased attack range and splash damage.',
         cooldownPerLevel: [1, 1, 1, 1],
-        costPerLevel: {
-          costAmount: [0],
-          resourceType: 'No Cost',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 0,
+              isPercentage: false,
+              resourceType: 'no-cost',
+            },
+          ],
+        ],
       },
       {
         name: 'Zap!',
@@ -474,10 +739,36 @@ const CHAMPIONS = [
         basicDescription:
           'Jinx fires a shock blast that deals physical damage to the first enemy hit, granting vision and slowing them for 2 seconds.',
         cooldownPerLevel: [8, 7, 6, 5],
-        costPerLevel: {
-          costAmount: [50, 60, 70, 80],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 50,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+          [
+            {
+              amount: 60,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+          [
+            {
+              amount: 70,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+          [
+            {
+              amount: 80,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Flame Chompers!',
@@ -485,10 +776,15 @@ const CHAMPIONS = [
         basicDescription:
           'Jinx tosses out three chompers that explode on contact with enemy champions, interrupting dashes and rooting them. Enemies hit take magic damage.',
         cooldownPerLevel: [19, 16, 13, 10],
-        costPerLevel: {
-          costAmount: [70],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 70,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Super Mega Death Rocket!',
@@ -496,10 +792,15 @@ const CHAMPIONS = [
         basicDescription:
           'Jinx fires a mega-rocket that gains damage and speed over the first second. It explodes on the first enemy champion hit, dealing physical damage, with nearby enemies taking reduced damage.',
         cooldownPerLevel: [60, 50, 40],
-        costPerLevel: {
-          costAmount: [100],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 100,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
     ],
   },
@@ -525,10 +826,15 @@ const CHAMPIONS = [
         basicDescription:
           'Blitzcrank fires his right hand in the target direction, grabbing the first enemy hit and pulling them towards him, stunning them for 0.65 seconds.',
         cooldownPerLevel: [18, 17, 16, 15],
-        costPerLevel: {
-          costAmount: [80],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 80,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Overdrive',
@@ -536,10 +842,15 @@ const CHAMPIONS = [
         basicDescription:
           'Blitzcrank gains bonus movement speed for 2.5 seconds, decaying to 25%. The ability can be recast for an increased speed boost, but Blitzcrank becomes slowed afterward.',
         cooldownPerLevel: [10, 10, 10, 10],
-        costPerLevel: {
-          costAmount: [50],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 50,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Power Fist',
@@ -547,10 +858,15 @@ const CHAMPIONS = [
         basicDescription:
           'Blitzcrank empowers his next basic attack within 5 seconds, gaining bonus attack range and causing his attack to critically strike and knock up the target for 1 second.',
         cooldownPerLevel: [8, 7, 6, 5],
-        costPerLevel: {
-          costAmount: [25],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 25,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
       {
         name: 'Static Field',
@@ -558,16 +874,21 @@ const CHAMPIONS = [
         basicDescription:
           'Blitzcrank’s basic attacks mark enemies, detonating after 1 second to deal magic damage. He can also activate this ability to deal magic damage and silence nearby enemies for 0.5 seconds.',
         cooldownPerLevel: [55, 35, 15],
-        costPerLevel: {
-          costAmount: [100],
-          resourceType: 'Mana',
-        },
+        costPerLevel: [
+          [
+            {
+              amount: 100,
+              isPercentage: false,
+              resourceType: 'mana',
+            },
+          ],
+        ],
       },
     ],
   },
   {
     name: 'Riven',
-    title: 'The Exile',
+    title: 'Exile',
     assets: {
       imageThumbnail: '/assets/champions/riven/champion-thumbnail.webp',
       videoMP4: '/assets/champions/riven/champion-intro.mp4',
@@ -588,7 +909,15 @@ const CHAMPIONS = [
         basicDescription:
           'Riven slashes with her sword up to three times, dealing physical damage with each cast. The third cast strikes a larger area and knocks back enemies hit. Each cast resets her basic attack timer, and she can dash during the ability. The third cast can cross terrain.',
         cooldownPerLevel: [13, 13, 13, 13],
-        costPerLevel: null, // Riven's abilities are free to cast
+        costPerLevel: [
+          [
+            {
+              amount: 0,
+              isPercentage: false,
+              resourceType: 'no-cost',
+            },
+          ],
+        ],
       },
       {
         name: 'Ki Burst',
@@ -596,7 +925,15 @@ const CHAMPIONS = [
         basicDescription:
           'Riven emits a flash of energy, dealing physical damage to nearby enemies and stunning them for 0.75 seconds.',
         cooldownPerLevel: [8.5, 8, 7.5, 7],
-        costPerLevel: null, // Riven's abilities are free to cast
+        costPerLevel: [
+          [
+            {
+              amount: 0,
+              isPercentage: false,
+              resourceType: 'no-cost',
+            },
+          ],
+        ],
       },
       {
         name: 'Valor',
@@ -604,7 +941,15 @@ const CHAMPIONS = [
         basicDescription:
           'Riven dashes in the target direction, gaining a shield for 2 seconds. She can cast other abilities during the dash, but she cannot dash through terrain.',
         cooldownPerLevel: [9, 8, 7, 6],
-        costPerLevel: null, // Riven's abilities are free to cast
+        costPerLevel: [
+          [
+            {
+              amount: 0,
+              isPercentage: false,
+              resourceType: 'no-cost',
+            },
+          ],
+        ],
       },
       {
         name: 'Blade of the Exile',
@@ -612,7 +957,15 @@ const CHAMPIONS = [
         basicDescription:
           'Riven empowers her blade for 15 seconds, gaining bonus attack damage, increased range on her abilities, and bonus attack range. During this time, she can cast Wind Slash to deal damage in a cone. Takedowns reset Wind Slash’s cast and extend the duration of the ultimate.',
         cooldownPerLevel: [120, 105, 90, 75, 60],
-        costPerLevel: null, // Riven's abilities are free to cast
+        costPerLevel: [
+          [
+            {
+              amount: 0,
+              isPercentage: false,
+              resourceType: 'no-cost',
+            },
+          ],
+        ],
       },
     ],
   },

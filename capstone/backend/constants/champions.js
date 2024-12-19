@@ -72,7 +72,7 @@ const CHAMPIONS = [
       videoMP4: '/assets/champions/garen/champion-intro.mp4',
       videoWEBM: '/assets/champions/garen/champion-intro.webm',
     },
-    mainRole: 'Solo',
+    mainRole: 'Baron',
     passive: {
       name: 'Perseverance',
       image: '/assets/champions/garen/perseverance.webp',
@@ -134,7 +134,8 @@ const CHAMPIONS = [
       videoMP4: '/assets/champions/aatrox/champion-intro.mp4',
       videoWEBM: '/assets/champions/aatrox/champion-intro.webm',
     },
-    mainRole: 'Top',
+    mainRole: 'Baron',
+    secondaryRole: 'Jungle',
     passive: {
       name: 'Deathbringer Stance',
       basicDescription:
@@ -262,6 +263,7 @@ const CHAMPIONS = [
       videoWEBM: '/assets/champions/warwick/champion-intro.webm',
     },
     mainRole: 'Jungle',
+    secondaryRole: 'Baron',
     passive: {
       name: 'Eternal Hunger',
       image: '/assets/champions/warwick/eternal-hunger.webp',
@@ -447,7 +449,7 @@ const CHAMPIONS = [
       videoMP4: '/assets/champions/jinx/champion-intro.mp4',
       videoWEBM: '/assets/champions/jinx/champion-intro.webm',
     },
-    mainRole: 'Bot',
+    mainRole: 'Duo',
     passive: {
       name: 'Get Excited!',
       image: '/assets/champions/jinx/get-excited.webp',
@@ -560,6 +562,57 @@ const CHAMPIONS = [
           costAmount: [100],
           resourceType: 'Mana',
         },
+      },
+    ],
+  },
+  {
+    name: 'Riven',
+    title: 'The Exile',
+    assets: {
+      imageThumbnail: '/assets/champions/riven/champion-thumbnail.webp',
+      videoMP4: '/assets/champions/riven/champion-intro.mp4',
+      videoWEBM: '/assets/champions/riven/champion-intro.webm',
+    },
+    mainRole: 'Baron',
+    secondaryRole: 'Jungle',
+    passive: {
+      name: 'Runic Blade',
+      image: '/assets/champions/riven/runic-blade.webp',
+      basicDescription:
+        "Riven's ability casts generate a stack of Charge for 6 seconds, stacking up to 3 times. Her basic attacks consume a stack to deal bonus physical damage based on her AD, reduced against monsters and structures. The bonus damage is affected by critical strike modifiers.",
+    },
+    abilities: [
+      {
+        name: 'Broken Wings',
+        image: '/assets/champions/riven/broken-wings.webp',
+        basicDescription:
+          'Riven slashes with her sword up to three times, dealing physical damage with each cast. The third cast strikes a larger area and knocks back enemies hit. Each cast resets her basic attack timer, and she can dash during the ability. The third cast can cross terrain.',
+        cooldownPerLevel: [13, 13, 13, 13],
+        costPerLevel: null, // Riven's abilities are free to cast
+      },
+      {
+        name: 'Ki Burst',
+        image: '/assets/champions/riven/ki-burst.webp',
+        basicDescription:
+          'Riven emits a flash of energy, dealing physical damage to nearby enemies and stunning them for 0.75 seconds.',
+        cooldownPerLevel: [8.5, 8, 7.5, 7],
+        costPerLevel: null, // Riven's abilities are free to cast
+      },
+      {
+        name: 'Valor',
+        image: '/assets/champions/riven/valor.webp',
+        basicDescription:
+          'Riven dashes in the target direction, gaining a shield for 2 seconds. She can cast other abilities during the dash, but she cannot dash through terrain.',
+        cooldownPerLevel: [9, 8, 7, 6],
+        costPerLevel: null, // Riven's abilities are free to cast
+      },
+      {
+        name: 'Blade of the Exile',
+        image: '/assets/champions/riven/blade-of-the-exile.webp',
+        basicDescription:
+          'Riven empowers her blade for 15 seconds, gaining bonus attack damage, increased range on her abilities, and bonus attack range. During this time, she can cast Wind Slash to deal damage in a cone. Takedowns reset Wind Slash’s cast and extend the duration of the ultimate.',
+        cooldownPerLevel: [120, 105, 90, 75, 60],
+        costPerLevel: null, // Riven's abilities are free to cast
       },
     ],
   },

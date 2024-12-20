@@ -60,6 +60,25 @@ export const signOut = async () => {
   }
 };
 
+export const fetchAllChampions = async () => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/champions`);
+
+    if (!response.ok) {
+      const errorMessage = `Error: ${response.status} ${response.statusText}`;
+      throw new Error(errorMessage); // Include status code and text in the error
+    }
+
+    // Parse the response data as JSON
+    const data = await response.json();
+
+    return data; // Return the parsed data
+  } catch (error) {
+    console.error('Error fetching champions:', error); // Log the error for debugging
+    throw new Error(error.message || 'Failed to fetch champions'); // Throw a custom error message
+  }
+};
+
 // export const addMyHotel = async (hotelFormData) => {
 //   const response = await fetch(`${API_BASE_URL}/api/my-hotels`, {
 //     method: 'POST',

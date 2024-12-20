@@ -8,6 +8,7 @@ import cookieParser from 'cookie-parser';
 // Import Routes
 import userRoutes from './routes/userRoutes.js';
 import authRoutes from './routes/authRoutes.js';
+import championRoutes from './routes/championRoutes.js';
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI);
@@ -36,6 +37,7 @@ app.use(
 // API Routes
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/champions', championRoutes);
 
 // Start the Server
 // Use environment variable for port or fallback to 3000

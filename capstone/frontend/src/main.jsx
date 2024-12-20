@@ -14,12 +14,11 @@ const queryClient = new QueryClient({
 });
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // Removed "!" from getElementById
-  <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <AppContextProvider>
-        <App />
-      </AppContextProvider>
-    </QueryClientProvider>
-  </React.StrictMode>
+  // Removed "!" from getElementById\
+  // Removed Wrapper <React.StrictMode>
+  <QueryClientProvider client={queryClient}>
+    <AppContextProvider>
+      <App />
+    </AppContextProvider>
+  </QueryClientProvider>
 );

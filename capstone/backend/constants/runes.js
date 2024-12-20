@@ -340,7 +340,7 @@ const RUNES = [
     path: 'Inspiration',
     slot: 3,
     description:
-      'While you are within 550 range of a turret, it generates 6 stacks over 3 seconds. At maximum stacks, your next basic attack against the turret detonates the stacks to deal 200 (+ 30% of your maximum health) bonus Attack damageMagic damage adaptive damage.',
+      'While you are within 550 range of a turret, it generates 6 stacks over 3 seconds. At maximum stacks, your next basic attack against the turret detonates the stacks to deal 200 (+ 30% of your maximum health) bonus Attack damage/Magic damage adaptive damage.',
     cooldown: {
       time: 35,
       unit: 'seconds',

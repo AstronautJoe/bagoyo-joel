@@ -35,12 +35,10 @@ const Home = () => {
   }
 
   return (
-    <div className="px-40">
-      <h1 className="text-strong">RiftBuilds</h1>
-
-      {/* Champion Grid */}
+    <>
+      <h2 className="text-3xl italic text-center mb-10">Select a Champion</h2>
       <ChampionGrid champions={champions} />
-    </div>
+    </>
   );
 };
 

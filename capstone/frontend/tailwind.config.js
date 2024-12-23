@@ -15,9 +15,9 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          primary: '#537AF3', // Dark gray for primary UI elements
-          secondary: '#2A2D34', // Cool gray for secondary UI elements
-          accent: '#A8DADC', //accent highlights
+          primary: '#537AF3', // Blue
+          secondary: '#2A2D34', // Cool grey
+          accent: '#A8DADC', //Teal White
           neutral: '#EDF2F7', // Light gray for neutral backgrounds
           'base-100': '#FFFFFF', // Clean white for base
           'base-content': '#1A202C', // Dark gray for text

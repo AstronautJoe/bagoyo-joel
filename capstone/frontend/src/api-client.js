@@ -60,6 +60,8 @@ export const signOut = async () => {
   }
 };
 
+// Champion related functions
+
 export const fetchAllChampions = async () => {
   try {
     const response = await fetch(`${API_BASE_URL}/api/champions`);
@@ -68,26 +70,26 @@ export const fetchAllChampions = async () => {
       const errorMessage = `Error: ${response.status} ${response.statusText}`;
       throw new Error(errorMessage); // Include status code and text in the error
     }
-
-    // Parse the response data as JSON
-    const data = await response.json();
-
-    return data; // Return the parsed data
+    const championData = await response.json();
+    return championData;
   } catch (error) {
-    console.error('Error fetching champions:', error); // Log the error for debugging
-    throw new Error(error.message || 'Failed to fetch champions'); // Throw a custom error message
+    console.error('Error fetching champions:', error);
+    throw new Error(error.message || 'Failed to fetch champions');
   }
 };
 
-// export const addMyHotel = async (hotelFormData) => {
-//   const response = await fetch(`${API_BASE_URL}/api/my-hotels`, {
-//     method: 'POST',
-//     credentials: 'include',
-//     body: hotelFormData,
-//   });
-//   if (!response.ok) {
-//     throw new Error('API Error: Failed to add hotel.');
-//   }
+export const fetchChampionById = async (championId) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/champions/${championId}`);
 
-//   return response.json();
-// };
+    if (!response.ok) {
+      const errorMessage = `Error: ${response.status} ${response.statusText}`;
+      throw new Error(errorMessage);
+    }
+    const championData = await response.json();
+    return championData; // Return the parsed data
+  } catch (error) {
+    console.error('Error fetching champion.', error); // Log the error for debugging
+    throw new Error(error.message || 'Failed to fetch champion.'); // Throw a custom error message
+  }
+};

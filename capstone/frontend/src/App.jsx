@@ -8,6 +8,7 @@ import BaseLayout from './layouts/BaseLayout';
 import Home from './pages/Home';
 import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
+import Champion from './pages/Champion';
 
 const App = () => {
   return (
@@ -35,6 +36,14 @@ const App = () => {
           element={
             <BaseLayout>
               <SignUp />
+            </BaseLayout>
+          }
+        />{' '}
+        <Route
+          path="/champions/:id"
+          element={
+            <BaseLayout>
+              <Champion />
             </BaseLayout>
           }
         />

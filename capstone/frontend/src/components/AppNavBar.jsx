@@ -5,12 +5,12 @@ const AppNavBar = () => {
   return (
     <div className="navbar bg-primary px-20">
       <div className="flex-1">
-        <a className="btn btn-ghost h-fit">
+        <Link to="/" className="btn btn-ghost h-fit">
           <img
             src="/assets/RiftBuildsWhite.png"
             className="object-contain h-14"
           />
-        </a>
+        </Link>
       </div>
       <div className="flex flex-row gap-3 border border-black">
         <Link to="/sign-up" className="btn btn-md btn-ghost">

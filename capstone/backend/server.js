@@ -38,6 +38,7 @@ app.use(
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/champions', championRoutes);
+// app.use('/api/champions/:id', championRoutes);
 
 // Start the Server
 // Use environment variable for port or fallback to 3000

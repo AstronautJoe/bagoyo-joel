@@ -24,6 +24,10 @@ const championSchema = new mongoose.Schema(
         type: String,
         required: true,
       },
+      image: {
+        type: String,
+        required: true,
+      },
       basicDescription: {
         type: String,
         required: true,

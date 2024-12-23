@@ -1,8 +1,17 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const ChampionCard = ({ championData }) => {
+  const championId = championData._id;
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('champions/' + championId);
+  };
   return (
-    <div className="card w-28 h-28 bg-base-100 shadow-md rounded-md">
+    <div
+      onClick={handleClick}
+      className="card w-28 h-28 bg-base-100 shadow-md rounded-md hover:cursor-pointer"
+    >
       <figure>
         {/* <p>Champion ID: {championData.id}</p> */}
         <img

@@ -8,7 +8,7 @@ const Header = () => {
 
   // console.log(isLoggedIn);
   return (
-    <div className="bg-primary py-6">
+    <div className="bg-primary py-1">
       <AppNavBar />
     </div>
   );

@@ -178,13 +178,14 @@ const CHAMPIONS = [
     secondaryRole: 'Jungle',
     passive: {
       name: 'Deathbringer Stance',
+      image: '/assets/champions/aatrox/deathbringer-stance.webp',
       basicDescription:
         "Aatrox periodically empowers his next basic attack, dealing bonus physical damage based on the target's max health and healing for a portion of the damage dealt. Basic attacks and abilities that hit champions or large monsters reduce the cooldown.",
     },
     abilities: [
       {
         name: 'The Darkin Blade',
-        image: 'assets/champions/aatrox/the-darkin-blade.webp', // Replace with the actual image URL
+        image: '/assets/champions/aatrox/the-darkin-blade.webp', // Replace with the actual image URL
         basicDescription:
           'Aatrox strikes in the target direction up to three times, each cast dealing increasing damage. Each strike has a sweetspot for bonus damage and knock-up.',
         cooldownPerLevel: [13, 11, 9, 7],
@@ -200,7 +201,7 @@ const CHAMPIONS = [
       },
       {
         name: 'Infernal Chains',
-        image: 'assets/champions/aatrox/infernal-chains.webp', // Replace with the actual image URL
+        image: '/assets/champions/aatrox/infernal-chains.webp', // Replace with the actual image URL
         basicDescription:
           'Aatrox throws a chain that damages and slows the first enemy hit. If it hits a champion or large monster, they are tethered to the impact area. If the target fails to break the tether, they are pulled back to the center and damaged again.',
         cooldownPerLevel: [15, 14, 13, 12],
@@ -216,7 +217,7 @@ const CHAMPIONS = [
       },
       {
         name: 'Umbral Dash',
-        image: 'assets/champions/aatrox/umbral-dash.webp', // Replace with the actual image URL
+        image: '/assets/champions/aatrox/umbral-dash.webp', // Replace with the actual image URL
         basicDescription:
           'Aatrox dashes in the target direction. Passively, he heals for a portion of the damage dealt to enemy champions. This ability can be used during his other abilities without interruption.',
         cooldownPerLevel: [8, 7, 6, 5],
@@ -232,7 +233,7 @@ const CHAMPIONS = [
       },
       {
         name: 'World Ender',
-        image: 'assets/champions/aatrox/world-ender.webp', // Replace with the actual image URL
+        image: '/assets/champions/aatrox/world-ender.webp', // Replace with the actual image URL
         basicDescription:
           'Aatrox unleashes his true form, gaining bonus attack damage, movement speed, size, and increased healing. During the transformation, champion takedowns extend the duration of his ultimate.',
         cooldownPerLevel: [75, 65, 55],
@@ -259,6 +260,7 @@ const CHAMPIONS = [
     mainRole: 'Support',
     passive: {
       name: 'Salvation',
+      image: '/assets/champions/soraka/salvation.webp',
       basicDescription:
         'Soraka gains 100% bonus movement speed when moving toward allied champions below 35% health.',
     },

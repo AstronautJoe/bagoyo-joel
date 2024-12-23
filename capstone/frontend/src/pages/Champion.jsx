@@ -52,8 +52,6 @@ const Champion = () => {
       <ChampionTitleCard championData={champion} />
       <GuideList />
       <ChampionAbilitiesSection championData={champion} />
-
-      <h2>Champion ID:{id}</h2>
     </>
   );
 };

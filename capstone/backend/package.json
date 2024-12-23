@@ -10,7 +10,8 @@
     "seed-champions": "node seeds/championSeed.js",
     "seed-items": "node seeds/itemSeed.js",
     "seed-runes": "node seeds/runeSeed.js",
-    "seed-keystones": "node seeds/keyStoneSeed.js"
+    "seed-keystones": "node seeds/keyStoneSeed.js",
+    "seed-spells": "node seeds/spellSeed.js"
   },
   "keywords": [],
   "author": "",
